@@ -1,0 +1,117 @@
+@import 'reset';
+
+
+.main {
+	flex: 1 0 auto;
+}
+
+.logo {
+	width: 151px;
+	height: 138px;
+}
+
+@keyframes slidein {
+	from {
+		margin-left: 100%;
+		width: 300%;
+	}
+
+	to {
+		margin-left: 0%;
+		width: 100%;
+	}
+}
+
+@media (max-width: 900px) {
+	.logo {
+		width: 115px;
+		height: 105px;
+	}
+}
+
+@media (max-width: 500px) {
+	.logo {
+		width: 105px;
+		height: 96px;
+	}
+}
+
+.title {
+	font-weight: 500;
+	font-size: 42px;
+	line-height: 55px;
+}
+
+.text {
+	font-weight: 400;
+	font-size: 22px;
+	line-height: 28px;
+}
+
+.btn-d {
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 23px;
+	color: var(--btn-text);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 10px 20px;
+	width: 225px;
+	background-image: var(--btn-grad);
+	border-radius: 40px;
+	border: none;
+	cursor: pointer;
+
+	&:hover {
+		background-image: var(--btn-grad-hov);
+	}
+}
+
+@media (max-width: 1200px) {
+	.title {
+		font-size: 36px;
+		line-height: 47px;
+	}
+
+	.text {
+		font-size: 20px;
+		line-height: 26px;
+	}
+}
+
+@media (max-width: 500px) {
+	.title {
+		font-size: 28px;
+		line-height: 36px;
+	}
+
+	.text {
+		font-size: 16px;
+		line-height: 20px;
+	}
+}
+
+.font1 {
+	font-family: 'Chakra Petch', sans-serif;
+}
+
+.ru .font1 {
+	font-family: 'Sofia Sans', sans-serif;
+}
+
+.font2 {
+	font-family: 'Space Grotesk', sans-serif;
+}
+
+.ru .font2 {
+	font-family: 'Exo 2', sans-serif;
+}
+
+.font3 {
+	font-family: 'Syne Mono', monospace;
+}
+
+.ru .font3 {
+	font-family: 'Jura', sans-serif;
+}

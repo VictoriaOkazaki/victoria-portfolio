@@ -1,0 +1,25 @@
+/*dark*/
+.wrapper {
+    --main-color: #000715;
+    --text-color-1: #E6E6FA;
+    --text-color-2: #000715;
+    --border-color: #6978D1;
+    --second-color: #CDCDDA;
+    --btn-text: #E6E6FA;
+    --special-color: #FF2400;
+    --btn-grad: linear-gradient(270deg, #13ADC7 0%, #6978D1 66.67%, #945DD6 100%);
+    --btn-grad-hov: linear-gradient(270deg, #0d6e80 0%, #3f487c 66.67%, #4f3272 100%);
+}
+
+/*light*/
+.wrapper.light {
+    --main-color: #CF8851;
+    --text-color-1: #FAEBD7;
+    --text-color-2: #200E00;
+    --border-color: #FFED6D;
+    --second-color: #E4C9B4;
+    --btn-text: #200E00;
+    --special-color: #243C43;
+    --btn-grad: linear-gradient(270deg, #FFD962 0%, #FEA23B 66.67%, #FF7800 100%);
+    --btn-grad-hov: linear-gradient(270deg, #E7C96B 0%, #C58033 66.67%, #B05504 100%);
+}
