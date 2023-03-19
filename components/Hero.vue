@@ -82,7 +82,6 @@ import git from '../assets/images/social/github.svg';
 import gitLight from '../assets/images/social/github-l.svg';
 import linked from '../assets/images/social/linkedin.svg';
 import linkedLight from '../assets/images/social/linkedin-l.svg';
-import { Vue3ToggleButton } from 'vue3-toggle-button';
 
 const { locale, locales, setLocale } = useI18n()
 const { t } = useI18n({
