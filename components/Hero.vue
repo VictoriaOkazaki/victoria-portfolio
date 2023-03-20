@@ -99,7 +99,7 @@ const smoothScrollToSection = (elemId) => {
 }
 
 const { isLight } = useTheme()
-const changeTheme = async() => {
+const changeTheme = async () => {
     isLight.value = !isLight.value
 }
 
@@ -167,6 +167,9 @@ const linkedPath = computed(() => {
     &__btns-light {
         cursor: pointer;
         z-index: 50;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
     }
 
     &__btns-lang.active {
@@ -245,6 +248,65 @@ const linkedPath = computed(() => {
     }
 }
 
+// https://codepen.io/EssSaibot/pen/zZmZbP
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 42px;
+    height: 3px;
+    margin-bottom: 10px;
+}
+
+.switch input {
+    display: none;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--second-color);
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 10px;
+    width: 10px;
+    left: 4px;
+    bottom: 1px;
+    background-color: #FF2400;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+}
+
+input:checked+.slider {
+    background-color: #200E00;
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px #6978D1;
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(24px);
+    -ms-transform: translateX(24px);
+    transform: translateX(24px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
 @media (max-width: 1300px) {
     .hero {
         &__btns {
@@ -318,6 +380,24 @@ const linkedPath = computed(() => {
             line-height: 21px;
         }
     }
+
+    .switch {
+        width: 30px;
+        height: 2px;
+        margin-bottom: 10px;
+    }
+
+    .slider:before {
+        height: 7px;
+        width: 7px;
+        left: 2px;
+    }
+
+    input:checked+.slider:before {
+        -webkit-transform: translateX(20px);
+        -ms-transform: translateX(20px);
+        transform: translateX(20px);
+    }
 }
 
 @media (max-width: 500px) {
@@ -371,95 +451,43 @@ const linkedPath = computed(() => {
             align-items: center;
             text-align: center;
             background-image: var(--btn-grad);
+
             &:hover {
                 background-image: var(--btn-grad-hov);
             }
         }
     }
 }
+
 @media (max-width: 400px) {
-.hero {
-    &__social-item {
-        margin: 0 8px;
+    .hero {
+        &__social-item {
+            margin: 0 8px;
+        }
+
+        &__social-img {
+            width: 18px;
+            height: 18px;
+        }
+
+        &__name {
+            font-size: 25px;
+            line-height: 32px;
+        }
+
+        &__title {
+            font-size: 22px;
+            line-height: 26px;
+        }
+
+        &__btn-cont {
+            font-size: 14px;
+            line-height: 17px;
+        }
+
+        &__btn {
+            width: 90px;
+            height: 90px;
+        }
     }
-    &__social-img {
-        width: 18px;
-        height: 18px;
-    }
-    &__name {
-        font-size: 25px;
-        line-height: 32px;
-    }
-    &__title {
-        font-size: 22px;
-        line-height: 26px;
-    }
-    &__btn-cont {
-        font-size: 14px;
-        line-height: 17px;
-    }
-    &__btn {
-        width: 90px;
-        height: 90px;
-    }
-}
-}
-
-// https://codepen.io/EssSaibot/pen/zZmZbP
-.switch {
-  position: relative;
-  display: inline-block;
-  width: 60px;
-  height: 34px;
-}
-
-.switch input {
-  display: none;
-}
-
-.slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #ccc;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
-}
-
-.slider:before {
-  position: absolute;
-  content: "";
-  height: 26px;
-  width: 26px;
-  left: 4px;
-  bottom: 4px;
-  background-color: white;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
-}
-
-input:checked + .slider {
-  background-color: #101010;
-}
-
-input:focus + .slider {
-  box-shadow: 0 0 1px #101010;
-}
-
-input:checked + .slider:before {
-  -webkit-transform: translateX(26px);
-  -ms-transform: translateX(26px);
-  transform: translateX(26px);
-}
-
-.slider.round {
-  border-radius: 34px;
-}
-
-.slider.round:before {
-  border-radius: 50%;
-}
-</style>
+}</style>

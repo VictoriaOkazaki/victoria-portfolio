@@ -2,13 +2,15 @@
     <div class="contacts__inner">
         <h2 class="contacts__title title font1">{{ t('title') }}</h2>
         <p class="contacts__text text font2">{{ t('text') }}</p>
-        <form action="" class="contacts__form">
-            <input type="text" :placeholder="t('name')" id="input-1" name="name" class="contacts__form-input">
-            <input type="text" :placeholder="t('email')" id="input-2" name="email" class="contacts__form-input">
-            <input type="tel" :placeholder="t('phone')" id="input-3" name="phone" class="contacts__form-input">
-            <textarea :placeholder="t('message')" id="input-4" name="message" class="contacts__form-input"></textarea>
-            <input type="submit" :value="t('btn')" class="contacts__form-btn btn-d font2">
-        </form>
+        <div class="contacts__form">
+            <input v-model="name" type="text" :placeholder="t('name')" id="input-1" name="name" class="contacts__form-input">
+            <input v-model="email" type="text" :placeholder="t('email')" id="input-2" name="email" class="contacts__form-input">
+            <input v-model="phone" type="tel" :placeholder="t('phone')" id="input-3" name="phone" class="contacts__form-input">
+            <textarea v-model="message" :placeholder="t('message')" id="input-4" name="message" class="contacts__form-input"></textarea>
+            <input @click="submit" :value="t('btn')" class="contacts__form-btn btn-d font2">
+        </div>
+        <div class="error" v-if="error">{{error}}</div>
+        <div class="sended" v-if="sended">{{sended}}</div>
     </div>
 </template>
 
@@ -39,9 +41,78 @@
 const { t } = useI18n({
     useScope: 'local'
 })
+
+const error = ref('')
+
+const sended = ref('')
+let timer
+watch(sended, (value) => {
+    clearTimeout(timer)
+    if (value) {
+        timer = setTimeout(() => {
+            sended.value = ''
+        }, 10000)
+    }
+})
+
+const name = ref('')
+const email = ref('')
+const phone = ref('')
+const message = ref('')
+
+const submit = async (e) => {
+    e.preventDefault()
+    sended.value = false
+    if (!name.value) {
+        error.value = 'Empty name'
+        return
+    }
+    if (!email.value) {
+        error.value = 'Empty email'
+        return
+    }
+    if (!phone.value) {
+        error.value = 'Empty phone'
+        return
+    }
+    if (!message.value) {
+        error.value = 'Empty message'
+        return
+    }
+    error.value = ''
+
+    const res = await fetch('/api/submit', {
+        method: 'post',
+        body: JSON.stringify({
+            text: `Name: ${name.value}\n` +
+                  `Email: ${email.value}\n` +
+                  `Phone: ${phone.value}\n` +
+                  `Message: ${message.value}\n`
+        })
+    })
+    const answer  = JSON.parse(await res.text())
+    console.log('sended', answer.success)
+    if (answer.success) {
+        name.value = ''
+        email.value = ''
+        phone.value = ''
+        message.value = ''
+        sended.value = 'Message sended'
+    } else {
+        error.value = 'Message not sended'
+    }
+}
 </script>
 
 <style lang="scss" scoped>
+.error {
+    margin-top: 10px;
+    color: #FF2400;
+}
+.sended {
+    margin-top: 10px;
+    color: #243C43;
+}
 .contacts {
     &__inner {
         padding: 50px 0;
