@@ -7,10 +7,10 @@
             <input v-model="email" type="text" :placeholder="t('email')" id="input-2" name="email" class="contacts__form-input">
             <input v-model="phone" type="tel" :placeholder="t('phone')" id="input-3" name="phone" class="contacts__form-input">
             <textarea v-model="message" :placeholder="t('message')" id="input-4" name="message" class="contacts__form-input"></textarea>
-            <input @click="submit" :value="t('btn')" class="contacts__form-btn btn-d font2">
+            <div @click="submit" class="contacts__form-btn btn-d font2">{{ t('btn') }}</div>
         </div>
-        <div class="error" v-if="error">{{error}}</div>
-        <div class="sended" v-if="sended">{{sended}}</div>
+        <div class="error font2" v-if="error">{{error}}</div>
+        <div class="sended font2" v-if="sended">{{sended}}</div>
     </div>
 </template>
 
@@ -108,10 +108,12 @@ const submit = async (e) => {
 .error {
     margin-top: 10px;
     color: #FF2400;
+    font-size: 16px;
 }
 .sended {
     margin-top: 10px;
-    color: #243C43;
+    color: #04b791;
+    font-size: 16px;
 }
 .contacts {
     &__inner {

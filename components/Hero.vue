@@ -253,7 +253,7 @@ const linkedPath = computed(() => {
     position: relative;
     display: inline-block;
     width: 42px;
-    height: 3px;
+    height: 2px;
     margin-bottom: 10px;
 }
 
@@ -279,8 +279,8 @@ const linkedPath = computed(() => {
     height: 10px;
     width: 10px;
     left: 4px;
-    bottom: 1px;
-    background-color: #FF2400;
+    bottom: 0.6px;
+    background-color: var(--special-color);
     -webkit-transition: 0.4s;
     transition: 0.4s;
 }
