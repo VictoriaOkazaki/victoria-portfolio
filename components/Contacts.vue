@@ -125,6 +125,12 @@ const submit = async (e) => {
         color: var(--text-color-1);
     }
 
+    &__title {
+        white-space: nowrap;
+        overflow: hidden;
+        width: 10ch;
+    }
+
     &__text {
         margin: 50px 0;
     }

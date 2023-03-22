@@ -3,9 +3,15 @@
         <h2 class="skills__title title font1">{{ t('title') }}</h2>
         <div class="skills__content">
             <ul class="skills__row">
-                <li class="skills__row-item font2">{js}</li>
-                <li class="skills__row-item font2">{vue}</li>
-                <li class="skills__row-item font2">{git}</li>
+                <li class="skills__row-item font2">
+                    <p class="skills__row-item-text">{js}</p>
+                </li>
+                <li class="skills__row-item font2">
+                    <p class="skills__row-item-text">{vue}</p>
+                </li>
+                <li class="skills__row-item font2">
+                    <p class="skills__row-item-text">{git}</p>
+                </li>
             </ul>
             <img src="../assets/images/stickers.png" alt="gulp, wordpress, photoshop, php, sass, tilda, figma, b2 english"
                 class="skills__img">
@@ -38,6 +44,9 @@ const { t } = useI18n({
 
     &__title {
         color: var(--text-color-2);
+        white-space: nowrap;
+        overflow: hidden;
+        width: 6ch;
     }
 
     &__content {

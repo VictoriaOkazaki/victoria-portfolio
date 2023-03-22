@@ -9,6 +9,12 @@
     --special-color: #FF2400;
     --btn-grad: linear-gradient(270deg, #13ADC7 0%, #6978D1 66.67%, #945DD6 100%);
     --btn-grad-hov: linear-gradient(270deg, #0d6e80 0%, #3f487c 66.67%, #4f3272 100%);
+
+    --glow-1: rgba(105, 120, 209, 0.2);
+    --glow-2: rgba(205, 205, 218, 0.2);
+    --text-glow-1: #f272b2;
+    --text-glow-2: #f662ac;
+    --text-glow-2: #ff4da6;
 }
 
 /*light*/
@@ -22,4 +28,10 @@
     --special-color: #243C43;
     --btn-grad: linear-gradient(270deg, #FFD962 0%, #FEA23B 66.67%, #FF7800 100%);
     --btn-grad-hov: linear-gradient(270deg, #E7C96B 0%, #C58033 66.67%, #B05504 100%);
+
+    --glow-1: rgba(255, 237, 109, 0.4);
+    --glow-2: rgba(253, 235, 97, 0.4);
+    --text-glow-1: #f56c62;
+    --text-glow-2: #de544a;
+    --text-glow-2: #cb3f35;
 }

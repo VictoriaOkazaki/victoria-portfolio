@@ -45,8 +45,8 @@
                 <h1 class="hero__title font3">{{ t('prof-1') }} <br> {{ t('prof-2') }}</h1>
             </div>
             <div class="hero__btn-cont">
-                <a class="hero__btn font2" href="#contacts" @click.prevent="smoothScrollToSection('contacts')">{{ t('btn')
-                }}
+                <a class="hero__btn font2" href="#contacts" @click.prevent="smoothScrollToSection('contacts')">
+                    {{ t('btn') }}
                 </a>
             </div>
         </div>
@@ -217,10 +217,13 @@ const linkedPath = computed(() => {
     }
 
     &__title {
+        width: 18ch;
         font-weight: 400;
         font-size: 48px;
         line-height: 58px;
         color: var(--text-color-1);
+        white-space: nowrap;
+        overflow: hidden;
     }
 
     &__btn-cont {

@@ -135,6 +135,9 @@ const job4Path = computed(() => {
     }
 
     &__top-title {
+        width: 8ch;
+        white-space: nowrap;
+        overflow: hidden;
         position: absolute;
         left: 0;
         color: var(--text-color-2);
@@ -153,6 +156,9 @@ const job4Path = computed(() => {
     }
 
     &__bottom-title {
+        width: 13ch;
+        white-space: nowrap;
+        overflow: hidden;
         margin: 70px 0 50px;
         font-weight: 400;
         font-size: 30px;

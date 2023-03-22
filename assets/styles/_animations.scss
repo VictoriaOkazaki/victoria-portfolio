@@ -1,0 +1,136 @@
+@keyframes slidein {
+	from {
+		margin-left: 100%;
+		width: 300%;
+	}
+
+	to {
+		margin-left: 0%;
+		width: 100%;
+	}
+}
+
+@keyframes cursor {
+	0% {
+		border-color: var(--text-color-1);
+	}
+
+	50% {
+		border-color: transparent;
+	}
+
+	100% {
+		border-color: var(--text-color-1);
+	}
+}
+
+@keyframes printed_text {
+	from {
+		width: 0;
+	}
+}
+
+
+@keyframes pulse {
+	0% {
+		transform: scale(0.85);
+	}
+
+	50% {
+		transform: scale(1.1);
+	}
+
+	100% {
+		transform: scale(0.85);
+	}
+}
+
+@keyframes pulse-2 {
+	0% {
+		transform: scale(0.9);
+	}
+
+	50% {
+		transform: scale(1.05);
+	}
+
+	100% {
+		transform: scale(0.9);
+	}
+}
+
+@keyframes border-glow-1 {
+	0% {
+		box-shadow: none;
+	}
+
+	50% {
+		box-shadow: var(--glow-1) 0px 0px 20px 10px inset;
+	}
+
+	100% {
+		box-shadow: none;
+	}
+}
+
+@keyframes border-glow-2 {
+	0% {
+		box-shadow: none;
+	}
+
+	50% {
+		box-shadow: var(--glow-2) 0px 0px 20px 10px inset;
+	}
+
+	100% {
+		box-shadow: none;
+	}
+}
+
+
+@keyframes text-glow {
+    0% {
+		text-shadow: 0 0 2px #fff, 0 0 3px var(--text-glow-1);
+	}
+
+	50% {
+		text-shadow: 0 0 4px #fff, 0 0 4px var(--text-glow-2);
+	}
+
+	100% {
+		text-shadow: 0 0 5px #fff, 0 0 5px var(--text-glow-3);
+	}
+}
+.hero__title,
+.about__bottom-title,
+.about__top-title,
+.works__title,
+.skills__title,
+.contacts__title {
+	animation: cursor 0.2s step-end infinite, printed_text 4s steps(29) infinite;
+}
+.about__top-container,
+.about__jobs {
+	animation: border-glow-1 3s infinite;
+}
+
+.works__item {
+	animation: border-glow-2 3s infinite;
+}
+
+.works__btn,
+.contacts__form-btn {
+	animation: pulse 4s infinite;
+}
+
+.hero__btn-cont {
+	animation: pulse 4s linear infinite;
+}
+.skills__row-item,
+.works__item-link {
+    animation: pulse-2 4s ease-in infinite;
+}
+.footer__top-text,
+.hero__name {
+animation: text-glow 4s infinite;
+}

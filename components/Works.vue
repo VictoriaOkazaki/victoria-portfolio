@@ -72,6 +72,9 @@ const { t } = useI18n({
     &__title {
         color: var(--text-color-1);
         margin-bottom: 50px;
+        white-space: nowrap;
+        overflow: hidden;
+        width: 5ch;
     }
 
     &__list {
