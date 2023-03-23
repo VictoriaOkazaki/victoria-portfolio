@@ -8,9 +8,10 @@
                 <p class="works__item-text text font2">{{ locale === 'ru' ? project.ru_description : project.description }}
                 </p>
                 <a class="works__item-link btn-d font2" :href="project.link" target="_blank">{{ t('btn-1') }}</a>
-                <div class="works__item-mark" v-show="project.is_my_design">
-                    <div class="works__item-mark-text font2">{{ t('mark') }}</div>
-                </div>
+                <!-- <div class="mark" v-show="project.is_my_design">
+                    <div class="mark-text font2">{{ t('mark') }}</div>
+                </div> -->
+                <Mark v-show="project.is_my_design" />
             </li>
         </ul>
         <button @click="addNextProjects" v-show="showMoreVisibility" class="works__btn btn-d font2" type="button">{{
@@ -23,14 +24,12 @@
     "en": {
         "btn-1": "View the site",
         "btn-2": "View more",
-        "title": "Works",
-        "mark": "my design"
+        "title": "Works"
     },
     "ru": {
         "btn-1": "Показать сайт",
         "btn-2": "Показать еще",
-        "title": "Работы",
-        "mark": "мой дизайн"
+        "title": "Работы"
     }
 }
 </i18n>
@@ -126,25 +125,7 @@ const { t } = useI18n({
         color: var(--text-color-1);
     }
 
-    &__item-mark {
-        border: 1px dashed var(--border-color);
-        box-shadow: 0px 0px 20px 4px var(--border-color) inset;
-        width: 82px;
-        height: 82px;
-        border-radius: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        position: absolute;
-        right: 5px;
-        bottom: 5px;
-    }
 
-    &__item-mark-text {
-        color: var(--text-color-1);
-        text-shadow: 0px 4px 2px var(--text-color-1);
-        font-size: 14px;
-    }
 
     &__btn {
         margin-top: 70px;
@@ -178,6 +159,7 @@ const { t } = useI18n({
     .works__title {
         margin-bottom: 40px;
     }
+
     .works__list {
         grid-template-columns: repeat(1, 1fr);
     }
@@ -210,13 +192,6 @@ const { t } = useI18n({
     .works__item-link,
     .works__btn {
         padding: 8px 0;
-    }
-    .works__item-mark {
-        width: 72px;
-        height: 72px;
-    }
-    .works__item-mark-text {
-        font-size: 12px;
     }
 }
 </style>

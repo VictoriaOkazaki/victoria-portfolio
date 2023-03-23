@@ -38,6 +38,7 @@
       </section>
     </main>
     <footer class="footer">
+      <Mark class="footer__mark" />
       <div class="container">
         <Footer />
       </div>
@@ -72,6 +73,12 @@
 .works,
 .footer {
   background-color: var(--main-color);
+  position: relative;
+}
+.footer__mark {
+  position: absolute;
+  top: 10px;
+  right: 10px;
 }
 
 /* burger */
@@ -138,10 +145,12 @@
     background-position: right;
   }
 }
+
 @media (max-width: 800px) {
   .container {
     padding: 0 60px;
   }
+
   .container-hero {
     background-position: top;
   }
@@ -152,13 +161,16 @@
     padding: 0 40px;
   }
 }
+
 @media (max-width: 500px) {
   .container {
     padding: 0 30px;
   }
+
   .burger__window-list {
     left: 30px;
   }
+
   .burger__window-item {
     margin: 0 1px;
   }
@@ -203,8 +215,8 @@ const heroStyle = computed(() => {
     }
   }
   return {
-      'background-image': `url(${homeBgDark})`
-    }
+    'background-image': `url(${homeBgDark})`
+  }
 })
 const contactStyle = computed(() => {
   if (isLight.value) {
@@ -213,7 +225,7 @@ const contactStyle = computed(() => {
     }
   }
   return {
-      'background-image': `url(${contactsBgDark})`
-    }
+    'background-image': `url(${contactsBgDark})`
+  }
 })
 </script>
