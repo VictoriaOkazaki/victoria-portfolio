@@ -12,7 +12,7 @@
                     <img :src="lampPath" alt="" class="hero__btns-img">
                     <label class="switch">
                         <input type="checkbox" :checked="isLight" @click="changeTheme">
-                        <div class="slider round"></div>
+                        <div class="slider round" :class="{'slider-burger': isBurgerOpen}"></div>
                     </label>
                 </div>
             </div>
@@ -82,6 +82,9 @@ import git from '../assets/images/social/github.svg';
 import gitLight from '../assets/images/social/github-l.svg';
 import linked from '../assets/images/social/linkedin.svg';
 import linkedLight from '../assets/images/social/linkedin-l.svg';
+import { useBurger } from '~~/hooks/useBurger';
+
+const { isBurgerOpen } = useBurger()
 
 const { locale, locales, setLocale } = useI18n()
 const { t } = useI18n({
@@ -274,6 +277,10 @@ const linkedPath = computed(() => {
     background-color: var(--second-color);
     -webkit-transition: 0.4s;
     transition: 0.4s;
+}
+
+.slider-burger {
+    background-color: #f662ac;
 }
 
 .slider:before {

@@ -10,8 +10,7 @@
     </div>
     <div class="container container-hero" :style="heroStyle">
       <div class="container-65">
-        <Header :isBurgerOpen="isBurgerOpen" @burger-click="isBurgerOpen = !isBurgerOpen"
-          @burger-close="isBurgerOpen = false" />
+        <Header />
         <Hero />
       </div>
     </div>
@@ -175,6 +174,11 @@
     margin: 0 1px;
   }
 }
+@media (max-width: 320px) {
+  .container {
+    padding: 0 20px;
+  }
+}
 </style>
 <script setup>
 import { useTheme } from './hooks/useTheme';
@@ -182,6 +186,7 @@ import homeBgDark from 'assets/images/home-bg-d.jpg';
 import homeBgLight from 'assets/images/home-bg-l.jpg';
 import contactsBgDark from 'assets/images/contacts-bg.jpg';
 import contactsBgLight from 'assets/images/contacts-bg-l.jpg';
+import { useBurger } from '~~/hooks/useBurger';
 
 useHead({
   link: [
@@ -204,7 +209,7 @@ useHead({
 const { locale } = useI18n()
 const isRu = computed(() => locale.value === 'ru')
 
-const isBurgerOpen = ref(false)
+const { isBurgerOpen } = useBurger()
 
 const { isLight } = useTheme()
 

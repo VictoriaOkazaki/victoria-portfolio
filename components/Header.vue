@@ -13,7 +13,7 @@
                     </li>
                 </ul>
             </nav>
-            <Burger @click="emit('burger-click')" />
+            <Burger />
         </div>
     </header>
 </template>
@@ -41,6 +41,7 @@
 import { useTheme } from '~~/hooks/useTheme';
 import logo from '../assets/images/logo.svg';
 import logoLight from '../assets/images/logo-l.svg';
+import { useBurger } from '~~/hooks/useBurger';
 
 const { t } = useI18n({
     useScope: 'local'
@@ -76,15 +77,11 @@ const smoothScrollToSection = (elemId) => {
     });
 }
 
-const props = defineProps({
-    isBurgerOpen: Boolean
-})
-
-const emit = defineEmits(['burger-click', 'burger-close'])
+const { isBurgerOpen } = useBurger()
 
 const clickMenuLink = (link) => {
     smoothScrollToSection(link.href.substring(1))
-    emit('burger-close')
+    isBurgerOpen.value = false
 }
 
 const { isLight } = useTheme()

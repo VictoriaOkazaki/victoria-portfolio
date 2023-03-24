@@ -1,5 +1,5 @@
 <template>
-  <div id="nav-icon3" @click="burgerClick" :class="{ 'open': isOpen }">
+  <div id="nav-icon3" @click="burgerClick" :class="{ 'open': isBurgerOpen }">
     <span></span>
     <span></span>
     <span></span>
@@ -8,9 +8,11 @@
 </template>
 
 <script setup>
-const isOpen = ref(false)
+import { useBurger } from '~~/hooks/useBurger';
+
+const { isBurgerOpen } = useBurger()
 const burgerClick = () => {
-  isOpen.value = !isOpen.value
+  isBurgerOpen.value = !isBurgerOpen.value
 }
 </script>
 
