@@ -73,7 +73,7 @@ const { t } = useI18n({
         margin-bottom: 50px;
         white-space: nowrap;
         overflow: hidden;
-        width: 5ch;
+        width: 6ch;
     }
 
     &__list {

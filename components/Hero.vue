@@ -220,7 +220,7 @@ const linkedPath = computed(() => {
     }
 
     &__title {
-        width: 18ch;
+        width: 20ch;
         font-weight: 400;
         font-size: 48px;
         line-height: 58px;

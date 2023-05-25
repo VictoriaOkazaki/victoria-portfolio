@@ -210,6 +210,10 @@ const job4Path = computed(() => {
     }
 }
 
+.ru .about__bottom-title {
+    width: 20ch;
+}
+
 @media (max-width: 1200px) {
     .about {
         &__inner {

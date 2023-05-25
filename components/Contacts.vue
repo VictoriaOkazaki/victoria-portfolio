@@ -170,6 +170,9 @@ const submit = async (e) => {
     }
 }
 
+.ru .contacts__title {
+    width: 17ch;
+}
 #input-1 {
     border-radius: 40px 0px 0px 40px;
 }
