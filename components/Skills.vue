@@ -13,7 +13,7 @@
                     <p class="skills__row-item-text">{git}</p>
                 </li>
             </ul>
-            <img src="../assets/images/stickers.png" alt="gulp, wordpress, photoshop, php, sass, tilda, figma, b2 english"
+            <img src="../assets/images/stickers.webp" alt="gulp, wordpress, photoshop, php, sass, tilda, figma, b2 english"
                 class="skills__img">
         </div>
     </div>

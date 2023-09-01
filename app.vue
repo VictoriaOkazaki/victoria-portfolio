@@ -182,10 +182,10 @@
 </style>
 <script setup>
 import { useTheme } from './hooks/useTheme';
-import homeBgDark from 'assets/images/home-bg-d.jpg';
-import homeBgLight from 'assets/images/home-bg-l.jpg';
-import contactsBgDark from 'assets/images/contacts-bg.jpg';
-import contactsBgLight from 'assets/images/contacts-bg-l.jpg';
+import homeBgDark from 'assets/images/home-bg-d.webp';
+import homeBgLight from 'assets/images/home-bg-l.webp';
+import contactsBgDark from 'assets/images/contacts-bg.webp';
+import contactsBgLight from 'assets/images/contacts-bg-l.webp';
 import { useBurger } from '~~/hooks/useBurger';
 
 useHead({
