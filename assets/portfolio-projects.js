@@ -1,5 +1,14 @@
 export default [
   {
+    "description": "Multipage website of a vegetarian & vegan cafe. The site has a menu divided by categories, gallery, blog and shop pages, and also guests reviews collected from various paltforms. The possibility of booking a table by contacting WhatsApp has also been implemented.",
+    "id": "12fdfdgffgfg55k",
+    "is_my_design": true,
+    "link": "https://www.deramacafe.az/",
+    "name": "De Rama Cafe",
+    "photo": "site-covers/de-rama-cafe.webp",
+    "ru_description": "Многостраничный сайт вегетарианского и веганского кафе. На сайте есть меню, разделенное по категориям, галерея, страницы блога и магазина, а также отзывы гостей, собранные с различных платформ. Также реализована возможность бронирования столика через WhatsApp."
+  },
+  {
     "description": "Multipage website of a cafe with a library and art exhibits. The site has a menu page divided by categories, a booking page where you can reserve a table on certain date",
     "id": "12fdfdg55k",
     "is_my_design": true,
