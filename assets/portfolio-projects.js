@@ -1,14 +1,5 @@
 export default [
   {
-    "description": "My Beacons page",
-    "id": "12fdfdg500g55k",
-    "is_my_design": true,
-    "link": "https://beacons.ai/okazakivictoria",
-    "name": "My site",
-    "photo": "site-covers/beacons.webp",
-    "ru_description": "Мой сайт на Beacons"
-  },
-  {
     "description": "Landing page of an expert of marketplaces offering services for individual support in entering marketplaces.",
     "id": "12fgfg500g55k",
     "is_my_design": true,
@@ -43,6 +34,15 @@ export default [
     "name": "Herbal Skincare",
     "photo": "site-covers/herbal-skincare.webp",
     "ru_description": "Многостраничный сайт магазина, продающего косметику. На сайте имеется фильтр товаров и функциональная корзина, куда можно добавлять товары или удалять их, а также подтверждать заказ"
+  },
+  {
+    "description": "My Beacons page describing my services.",
+    "id": "12fdfdg500g55k",
+    "is_my_design": true,
+    "link": "https://beacons.ai/okazakivictoria",
+    "name": "My Beacons site",
+    "photo": "site-covers/beacons.webp",
+    "ru_description": "Мой сайт на Beacons, описывающий мои услуги."
   },
   {
     "description": "Multipage website of law firm built on Wordpress using Liberis - Attorney Lawyer Theme",
