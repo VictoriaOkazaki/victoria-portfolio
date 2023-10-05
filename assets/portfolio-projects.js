@@ -1,7 +1,7 @@
 export default [
   {
     "description": "My Beacons page",
-    "id": "12fgfg500g55k",
+    "id": "12fdfdg500g55k",
     "is_my_design": true,
     "link": "https://beacons.ai/okazakivictoria",
     "name": "My site",
