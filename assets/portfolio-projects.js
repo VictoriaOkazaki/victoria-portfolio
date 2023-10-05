@@ -1,12 +1,12 @@
 export default [
   {
-    "description": "Landing page of an expert on marketplaces offering services for individual support in entering marketplaces",
+    "description": "Landing page of an expert of marketplaces offering services for individual support in entering marketplaces.",
     "id": "12fgfg500g55k",
     "is_my_design": true,
     "link": "https://expert-pakhtusova.tb.ru/",
     "name": "Start business on marketplaces",
     "photo": "site-covers/de-rama-cafe.webp",
-    "ru_description": "Сайт эксперта по маркетплейсам, предлагающий услуги по индвидуальному сопровождению по выходу на маркетплейсы"
+    "ru_description": "Сайт эксперта по маркетплейсам, предлагающий услуги по индивидуальному сопровождению по выходу на маркетплейсы."
   },
   {
     "description": "Multipage website of a vegetarian & vegan cafe. The site has a menu divided by categories, gallery, blog and shop pages, and also guests reviews collected from various paltforms. The possibility of booking a table by contacting WhatsApp has also been implemented.",
