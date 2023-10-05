@@ -5,7 +5,7 @@ export default [
     "is_my_design": true,
     "link": "https://expert-pakhtusova.tb.ru/",
     "name": "Start business on marketplaces",
-    "photo": "site-covers/de-rama-cafe.webp",
+    "photo": "site-covers/svetlana-wb.webp",
     "ru_description": "Сайт эксперта по маркетплейсам, предлагающий услуги по индивидуальному сопровождению по выходу на маркетплейсы."
   },
   {
