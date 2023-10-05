@@ -12,31 +12,35 @@
                 <li class="about__jobs-item">
                     <img :src="job1Path" alt="" class="about__jobs-img">
                     <ul class="about__job">
-                        <li class="about__job-item text font2">{{ t('job-1-1') }}</li>
-                        <li class="about__job-item text font2">{{ t('job-1-2') }}</li>
+                        <li class="about__job-item text font2">{{ t('job-1') }}</li>
+                        <li class="about__job-item text font2">{{ t('job-2') }}</li>
+                        <li class="about__job-item text font2">{{ t('job-3') }}</li>
+                        <li class="about__job-item text font2">{{ t('job-4') }}</li>
                     </ul>
                 </li>
                 <li class="about__jobs-item">
                     <img :src="job2Path" alt="" class="about__jobs-img">
                     <ul class="about__job">
-                        <li class="about__job-item text font2">{{ t('job-2-1') }}</li>
-                        <li class="about__job-item text font2">{{ t('job-2-2') }}</li>
-                        <li class="about__job-item text font2">{{ t('job-2-3') }}</li>
-                        <li class="about__job-item text font2">{{ t('job-2-4') }}</li>
+                        <li class="about__job-item text font2">{{ t('job-5') }}</li>
+                        <li class="about__job-item text font2">{{ t('job-6') }}</li>
+                        <li class="about__job-item text font2">{{ t('job-7') }}</li>
+                        <li class="about__job-item text font2">{{ t('job-8') }}</li>
+                        <li class="about__job-item text font2">{{ t('job-9') }}</li>
                     </ul>
                 </li>
                 <li class="about__jobs-item">
                     <img :src="job3Path" alt="" class="about__jobs-img">
                     <ul class="about__job">
-                        <li class="about__job-item text font2">{{ t('job-3-1') }}</li>
-                        <li class="about__job-item text font2">{{ t('job-3-2') }}</li>
+                        <li class="about__job-item text font2">{{ t('job-10') }}</li>
+                        <li class="about__job-item text font2">{{ t('job-11') }}</li>
+                        <li class="about__job-item text font2">{{ t('job-12') }}</li>
                     </ul>
                 </li>
                 <li class="about__jobs-item">
                     <img :src="job4Path" alt="" class="about__jobs-img">
                     <ul class="about__job">
-                        <li class="about__job-item text font2">{{ t('job-4-1') }}</li>
-                        <li class="about__job-item text font2">{{ t('job-4-2') }}</li>
+                        <li class="about__job-item text font2">{{ t('job-13') }}</li>
+                        <li class="about__job-item text font2">{{ t('job-14') }}</li>
                     </ul>
                 </li>
             </ul>
@@ -49,32 +53,40 @@
     "en": {
         "title": "About me",
         "text": "My name is Victoria and i live in Baku city. I graduated from Moscow State Univercity at 2020. I started creating sites from Tilda and Webflow constructors. I continued my work on websites development after i got my hand in programming and markup languages.",
-        "subtitle": "My job is in:",
-        "job-1-1": "site layout preparation in Figma;",
-        "job-1-2": "logo development;",
-        "job-2-1": "making a website with HTML, CSS (or SASS) and Javascript;",
-        "job-2-2": "connecting animations;",
-        "job-2-3": "making adaptation of websites for various devices;",
-        "job-2-4": "building layouts on Tilda using Zero blocks;",
-        "job-3-1": "organizing CMS systems on Wordpress and database connect;",
-        "job-3-2": "building sites using Wordpress themes and Elementor templates;",
-        "job-4-1": "site transfer to hosting, domain connection;",
-        "job-4-2": "website development and problem solving."
+        "subtitle": "What I can offer you:",
+        "job-1": "an interview with you (orally, in writing) to draw up technical specifications, competitor analysis;",
+        "job-2": "site layout preparation in Figma;",
+        "job-3": "logo and favicon development;",
+        "job-4": "selecting photos (from stock or neural networks) and writing texts - if they don’t exist;",
+        "job-5": "making a website with HTML, CSS (or SASS) and Javascript;",
+        "job-6": "connecting animations;",
+        "job-7": "making adaptation of websites for various devices;",
+        "job-8": "building layouts on Tilda using Zero blocks (i work also with Flexbe and Tinkoff constructors);",
+        "job-9": "building a website using Wordpress themes and Elementor templates;",
+        "job-10": "development of an admin panel for content management;",
+        "job-11": "writing the main meta tags (title, description, h1) and adding the site to the results of Google and Yandex browsers;",
+        "job-12": "organizing CMS systems on Wordpress and database connect;",
+        "job-13": "site transfer to hosting, domain connection;",
+        "job-14": "website development and problem solving."
     },
     "ru": {
         "title": "Обо мне",
         "text": "Меня зовут Виктория, и я живу в Баку. Окончила в 2020 году Московский Государственный Университет. Изучение веб-разработки начала с конструкторов Tilda и Webflow. Я продолжила работу над созданием сайтов после освоения языков верстки и программирования.",
-        "subtitle": "Моя работа состоит в:",
-        "job-1-1": "создании макета сайта на Figma;",
-        "job-1-2": "разработке логотипа;",
-        "job-2-1": "верстке сайта с помощью HTML, CSS (или SASS) и Javascript;",
-        "job-2-2": "подключении анимаций;",
-        "job-2-3": "адаптации сайта под различные устройства;",
-        "job-2-4": "построении макета на Tilda с использованием зеро-блоков;",
-        "job-3-1": "организации CMS систем на Wordpress и подключении базы данных;",
-        "job-3-2": "построении сайта с использованием тем Wordpress и шаблонов Elementor;",
-        "job-4-1": "переносе сайта на хостинг, подключении домена;",
-        "job-4-2": "доработке сайта и решении различных проблем."
+        "subtitle": "Что я могу вам предложить:",
+        "job-1": "интервью с вами (устно, письменно) для составления технического задания, анализ конкурентов;",
+        "job-2": "разработку макета сайта в Figma;",
+        "job-3": "разработку логотипа и фавикона;",
+        "job-4": "подбор фото (со стоков или нейросети) и написание текстов - если их нет;",
+        "job-5": "вёрстку сайта по готовому макету в Figma;",
+        "job-6": "подключение анимаций;",
+        "job-7": "адаптацию сайта для различных устройств;",
+        "job-8": "создание сайта на Tilda с использованием зеро-блоков (также работаю с Flexbe и Тинькоф конструкторами);",
+        "job-9": "построениe сайта с использованием тем Wordpress и шаблонов Elementor;",
+        "job-10": "разработку админ-панели для управления контентом;",
+        "job-11": "прописывание основных мета-тегов (title, description, h1) и добавление сайта в выдачу Google и Яндекс браузеров;",
+        "job-12": "посадку сайта на CMS Wordpress;",
+        "job-13": "перенос сайта на хостинг, подключение домена;",
+        "job-14": "доработку сайта и решение различных проблем."
     }
 }
 </i18n>
@@ -156,7 +168,7 @@ const job4Path = computed(() => {
     }
 
     &__bottom-title {
-        width: 13ch;
+        width: 25ch;
         white-space: nowrap;
         overflow: hidden;
         margin: 70px 0 50px;
@@ -273,10 +285,12 @@ const job4Path = computed(() => {
         &__inner {
             padding: 60px 0;
         }
+
         &__top-container {
             padding-left: 20px;
             padding-right: 20px;
         }
+
         &__bottom-title {
             font-size: 20px;
             line-height: 26px;
@@ -294,4 +308,5 @@ const job4Path = computed(() => {
             margin-right: 10px;
         }
     }
-}</style>
+}
+</style>
