@@ -1,5 +1,14 @@
 export default [
   {
+    "description": "My Beacons page",
+    "id": "12fgfg500g55k",
+    "is_my_design": true,
+    "link": "https://beacons.ai/okazakivictoria",
+    "name": "My site",
+    "photo": "site-covers/beacons.webp",
+    "ru_description": "Мой сайт на Beacons"
+  },
+  {
     "description": "Landing page of an expert of marketplaces offering services for individual support in entering marketplaces.",
     "id": "12fgfg500g55k",
     "is_my_design": true,
