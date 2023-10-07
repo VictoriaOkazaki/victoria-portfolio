@@ -70,6 +70,8 @@ const submit = async (e) => {
     lockSubmit = true
     try {
         await doSubmit(e)
+    } catch {
+        error.value = 'Send error'
     } finally {
         setTimeout(() => { lockSubmit = false }, 5000)
     }
