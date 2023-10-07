@@ -1,4 +1,5 @@
 import nodemailer from 'nodemailer'
+import { sendTelegramBotMessage } from '../plugins/telegramBot';
 
 export default defineEventHandler(async (event) => {
     const body = await readBody(event)
@@ -19,13 +20,16 @@ export default defineEventHandler(async (event) => {
         text: body.text
     };
 
-    let sended =  false
+    let sended = false
     try {
         await transporter.sendMail(mailOptions)
         sended = true
     } catch (err) {
         console.error('Error send mail', err)
     }
+
+    const botMessage = `${mailOptions.subject}: \n${mailOptions.text}`
+    sendTelegramBotMessage(botMessage)
 
     return { success: sended }
 })

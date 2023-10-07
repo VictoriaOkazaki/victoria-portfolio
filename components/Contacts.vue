@@ -3,14 +3,18 @@
         <h2 class="contacts__title title font1">{{ t('title') }}</h2>
         <p class="contacts__text text font2">{{ t('text') }}</p>
         <div class="contacts__form">
-            <input v-model="name" type="text" :placeholder="t('name')" id="input-1" name="name" class="contacts__form-input">
-            <input v-model="email" type="text" :placeholder="t('email')" id="input-2" name="email" class="contacts__form-input">
-            <input v-model="phone" type="tel" :placeholder="t('phone')" id="input-3" name="phone" class="contacts__form-input">
-            <textarea v-model="message" :placeholder="t('message')" id="input-4" name="message" class="contacts__form-input"></textarea>
+            <input v-model="name" type="text" :placeholder="t('name')" id="input-1" name="name"
+                class="contacts__form-input">
+            <input v-model="email" type="text" :placeholder="t('email')" id="input-2" name="email"
+                class="contacts__form-input">
+            <input v-model="phone" type="tel" :placeholder="t('phone')" id="input-3" name="phone"
+                class="contacts__form-input">
+            <textarea v-model="message" :placeholder="t('message')" id="input-4" name="message"
+                class="contacts__form-input"></textarea>
             <div @click="submit" class="contacts__form-btn btn-d font2">{{ t('btn') }}</div>
         </div>
-        <div class="error font2" v-if="error">{{error}}</div>
-        <div class="sended font2" v-if="sended">{{sended}}</div>
+        <div class="error font2" v-if="error">{{ error }}</div>
+        <div class="sended font2" v-if="sended">{{ sended }}</div>
     </div>
 </template>
 
@@ -60,7 +64,18 @@ const email = ref('')
 const phone = ref('')
 const message = ref('')
 
+let lockSubmit = false
 const submit = async (e) => {
+    if (lockSubmit) return
+    lockSubmit = true
+    try {
+        await doSubmit(e)
+    } finally {
+        setTimeout(() => { lockSubmit = false }, 5000)
+    }
+}
+
+const doSubmit = async (e) => {
     e.preventDefault()
     sended.value = false
     if (!name.value) {
@@ -85,12 +100,12 @@ const submit = async (e) => {
         method: 'post',
         body: JSON.stringify({
             text: `Name: ${name.value}\n` +
-                  `Email: ${email.value}\n` +
-                  `Phone: ${phone.value}\n` +
-                  `Message: ${message.value}\n`
+                `Email: ${email.value}\n` +
+                `Phone: ${phone.value}\n` +
+                `Message: ${message.value}\n`
         })
     })
-    const answer  = JSON.parse(await res.text())
+    const answer = JSON.parse(await res.text())
     console.log('sended', answer.success)
     if (answer.success) {
         name.value = ''
@@ -110,11 +125,13 @@ const submit = async (e) => {
     color: #FF2400;
     font-size: 16px;
 }
+
 .sended {
     margin-top: 10px;
     color: #04b791;
     font-size: 16px;
 }
+
 .contacts {
     &__inner {
         padding: 50px 0;
@@ -173,6 +190,7 @@ const submit = async (e) => {
 .ru .contacts__title {
     width: 17ch;
 }
+
 #input-1 {
     border-radius: 40px 0px 0px 40px;
 }
@@ -236,11 +254,13 @@ const submit = async (e) => {
         &__text {
             margin: 30px 0 60px;
         }
+
         &__form-input {
             &::placeholder {
                 font-size: 16px !important;
                 line-height: 19px !important;
             }
+
             &:nth-child(2) {
                 margin: 20px 0;
             }
@@ -259,12 +279,15 @@ const submit = async (e) => {
                 font-size: 14px !important;
                 line-height: 17px !important;
             }
+
             &:nth-child(2) {
                 margin: 20px 0;
             }
         }
     }
+
     #input-4 {
         margin-top: 20px;
     }
-}</style>
+}
+</style>
