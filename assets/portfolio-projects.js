@@ -36,15 +36,6 @@ export default [
     "ru_description": "Многостраничный сайт магазина, продающего косметику. На сайте имеется фильтр товаров и функциональная корзина, куда можно добавлять товары или удалять их, а также подтверждать заказ"
   },
   {
-    "description": "My Beacons page describing my services.",
-    "id": "12fdfdg500g55k",
-    "is_my_design": true,
-    "link": "https://beacons.ai/okazakivictoria",
-    "name": "My Beacons site",
-    "photo": "site-covers/beacons.webp",
-    "ru_description": "Мой сайт на Beacons, описывающий мои услуги."
-  },
-  {
     "description": "Multipage website of law firm built on Wordpress using Liberis - Attorney Lawyer Theme",
     "id": "12324343k",
     "is_my_design": false,
@@ -61,6 +52,15 @@ export default [
     "name": "Metajungles",
     "photo": "site-covers/metajungles.webp",
     "ru_description": "Платформа NFT, на которой пользователь может отчеканить случайные NFT-картинки из коллекции, представленной на сайте, использую криптовалюту"
+  },
+  {
+    "description": "My Beacons page describing my services.",
+    "id": "12fdfdg500g55k",
+    "is_my_design": true,
+    "link": "https://beacons.ai/okazakivictoria",
+    "name": "My Beacons site",
+    "photo": "site-covers/beacons.webp",
+    "ru_description": "Мой сайт на Beacons, описывающий мои услуги."
   },
   {
     "description": "Home page of multipage site that sells dietetic food for cats",
