@@ -7,7 +7,7 @@
                     <p class="skills__row-item-text">{js}</p>
                 </li>
                 <li class="skills__row-item font2">
-                    <p class="skills__row-item-text">{vue}</p>
+                    <p class="skills__row-item-text">{vue, nuxt3}</p>
                 </li>
                 <li class="skills__row-item font2">
                     <p class="skills__row-item-text">{git}</p>
@@ -154,4 +154,5 @@ const { t } = useI18n({
             }
         }
     }
-}</style>
+}
+</style>

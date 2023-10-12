@@ -52,7 +52,7 @@
 {
     "en": {
         "title": "About me",
-        "text": "My name is Victoria and i live in Baku city. I graduated from Moscow State Univercity at 2020. I started creating sites from Tilda and Webflow constructors. I continued my work on websites development after i got my hand in programming and markup languages.",
+        "text": "My name is Victoria and i live in Baku city. I graduated from Moscow State Univercity at 2020. I started creating sites from Tilda and Webflow constructors. Then I got my hand in HTML, CSS,Javascript and SCSS preprocessor. I worked with the Gulp assembler, then decided to use something more modern and convenient. So I switched to using Vue and Nuxt3 in my work. In 2023, I decided to master web design and now I can create a prototype and website design myself.",
         "subtitle": "What I can offer you:",
         "job-1": "an interview with you (orally, in writing) to draw up technical specifications, competitor analysis;",
         "job-2": "site layout preparation in Figma;",
@@ -71,7 +71,7 @@
     },
     "ru": {
         "title": "Обо мне",
-        "text": "Меня зовут Виктория, и я живу в Баку. Окончила в 2020 году Московский Государственный Университет. Изучение веб-разработки начала с конструкторов Tilda и Webflow. Я продолжила работу над созданием сайтов после освоения языков верстки и программирования.",
+        "text": "Меня зовут Виктория, и я живу в Баку. Окончила в 2020 году Московский Государственный Университет. Изучение веб-разработки начала с конструкторов Tilda и Webflow. Затем освоила HTML, CSS, Javascript и препроцессор SCSS. Работала со сборщиком Gulp, затем решила использовать что-то более современное и удобное. Так перешла к использованию в работе Vue и Nuxt3. В 2023 году я решила освоить веб-дизайн и теперь сама могу создать прототип и дизайн сайта.",
         "subtitle": "Что я могу вам предложить:",
         "job-1": "интервью с вами (устно, письменно) для составления технического задания, анализ конкурентов;",
         "job-2": "разработку макета сайта в Figma;",
