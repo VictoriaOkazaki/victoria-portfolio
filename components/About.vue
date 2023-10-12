@@ -52,7 +52,7 @@
 {
     "en": {
         "title": "About me",
-        "text": "My name is Victoria and i live in Baku city. I graduated from Moscow State Univercity at 2020. I started creating sites from Tilda and Webflow constructors. Then I got my hand in HTML, CSS,Javascript and SCSS preprocessor. I worked with the Gulp assembler, then decided to use something more modern and convenient. So I switched to using Vue and Nuxt3 in my work. In 2023, I decided to master web design and now I can create a prototype and website design myself.",
+        "text": "My name is Victoria and i live in Baku city. I graduated from Moscow State Univercity at 2020. I started creating sites from Tilda and Webflow constructors. Then I got my hand in HTML, CSS, Javascript and SCSS preprocessor. I worked with the Gulp assembler, then decided to use something more modern and convenient. So I switched to using Vue and Nuxt3 in my work. In 2023, I decided to master web design and now I can create a prototype and website design myself.",
         "subtitle": "What I can offer you:",
         "job-1": "an interview with you (orally, in writing) to draw up technical specifications, competitor analysis;",
         "job-2": "site layout preparation in Figma;",
