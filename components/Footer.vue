@@ -23,6 +23,11 @@
                             <img :src="gitPath" alt="github" class="footer__social-img">
                         </a>
                     </li>
+                    <li class="hero__social-item">
+                        <a href="https://www.behance.net/kazakovviktori" class="hero__social-link" target="_blank">
+                            <img :src="behancePath" alt="behance" class="hero__social-img">
+                        </a>
+                    </li>
                     <li class="footer__social-item">
                         <a href="https://www.linkedin.com/in/%D0%B2%D0%B8%D0%BA%D1%82%D0%BE%D1%80%D0%B8%D1%8F-%D0%BA%D0%B0%D0%B7%D0%B0%D0%BA%D0%BE%D0%B2%D0%B0-156399199/"
                             target="_blank" class="footer__social-link">
@@ -82,6 +87,8 @@ import email from '../assets/images/social/mail.svg';
 import emailLight from '../assets/images/social/mail-l.svg';
 import insta from '../assets/images/social/instagram.svg';
 import instaLight from '../assets/images/social/instagram-l.svg';
+import behance from '../assets/images/social/behance.svg';
+import behanceLight from '../assets/images/social/behance-l.svg';
 
 const { t } = useI18n({
     useScope: 'local'
@@ -139,6 +146,12 @@ const instaPath = computed(() => {
         return instaLight
     }
     return insta
+})
+const behancePath = computed(() => {
+    if (isLight.value) {
+        return behanceLight
+    }
+    return behance
 })
 </script>
 
@@ -262,30 +275,35 @@ const instaPath = computed(() => {
     }
 
 }
+
 @media (max-width: 500px) {
     .footer {
         &__top-text {
             font-size: 16px;
             line-height: 19px;
         }
+
         &__content {
             margin-top: 60px;
         }
+
         &__social-item {
-        margin: 0 7.5px;
+            margin: 0 7.5px;
         }
+
         &__social-img {
             width: 18px;
             height: 18px;
         }
     }
 }
+
 @media (max-width: 340px) {
-.footer {
-    &__copyright {
-        font-size: 10px;
-        line-height: 12.5px;
+    .footer {
+        &__copyright {
+            font-size: 10px;
+            line-height: 12.5px;
+        }
     }
-}
 }
 </style>

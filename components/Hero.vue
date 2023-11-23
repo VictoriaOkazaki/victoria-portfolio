@@ -12,7 +12,7 @@
                     <img :src="lampPath" alt="" class="hero__btns-img">
                     <label class="switch">
                         <input type="checkbox" :checked="isLight" @click="changeTheme">
-                        <div class="slider round" :class="{'slider-burger': isBurgerOpen}"></div>
+                        <div class="slider round" :class="{ 'slider-burger': isBurgerOpen }"></div>
                     </label>
                 </div>
             </div>
@@ -32,6 +32,11 @@
                         <a href="https://github.com/VictoriaOkazaki?tab=repositories" class="hero__social-link"
                             target="_blank">
                             <img :src="gitPath" alt="github" class="hero__social-img">
+                        </a>
+                    </li>
+                    <li class="hero__social-item">
+                        <a href="https://www.behance.net/kazakovviktori" class="hero__social-link" target="_blank">
+                            <img :src="behancePath" alt="behance" class="hero__social-img">
                         </a>
                     </li>
                     <li class="hero__social-item">
@@ -82,6 +87,9 @@ import git from '../assets/images/social/github.svg';
 import gitLight from '../assets/images/social/github-l.svg';
 import linked from '../assets/images/social/linkedin.svg';
 import linkedLight from '../assets/images/social/linkedin-l.svg';
+import behance from '../assets/images/social/behance.svg';
+import behanceLight from '../assets/images/social/behance-l.svg';
+
 import { useBurger } from '~~/hooks/useBurger';
 
 const { isBurgerOpen } = useBurger()
@@ -135,6 +143,12 @@ const linkedPath = computed(() => {
         return linkedLight
     }
     return linked
+})
+const behancePath = computed(() => {
+    if (isLight.value) {
+        return behanceLight
+    }
+    return behance
 })
 </script>
 
@@ -500,4 +514,5 @@ input:checked+.slider:before {
             height: 90px;
         }
     }
-}</style>
+}
+</style>

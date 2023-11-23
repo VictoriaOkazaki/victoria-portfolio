@@ -54,13 +54,13 @@ export default [
     "ru_description": "Платформа NFT, на которой пользователь может отчеканить случайные NFT-картинки из коллекции, представленной на сайте, использую криптовалюту"
   },
   {
-    "description": "My Beacons page describing my services.",
-    "id": "12fdfdg500g55k",
+    "description": "Anastasiya copyrighter portfolio with advantages, contacts and works divided by categories. Category images are made by neural networks.",
+    "id": "12gfg8546g55k",
     "is_my_design": true,
-    "link": "https://beacons.ai/okazakivictoria",
-    "name": "My Beacons site",
-    "photo": "site-covers/beacons.webp",
-    "ru_description": "Мой сайт на Beacons, описывающий мои услуги."
+    "link": "https://anastasiya-copyrighter.tilda.ws/",
+    "name": "Copyrighter portfolio",
+    "photo": "site-covers/nastya.webp",
+    "ru_description": "Портфолио копирайтера с преимуществами, контактами и работами, разделенными по категориям. Изображения категорий созданы нейронными сетями."
   },
   {
     "description": "Home page of multipage site that sells dietetic food for cats",
@@ -99,6 +99,15 @@ export default [
     "ru_description": "Многостраничный сайт студии дизайнерской мебели. На сайте имеются галерея, слайдеры, блог и Google-карта"
   },
   {
+    "description": "My Beacons page describing my services.",
+    "id": "12fdfdg500g55k",
+    "is_my_design": true,
+    "link": "https://beacons.ai/okazakivictoria",
+    "name": "My Beacons site",
+    "photo": "site-covers/beacons.webp",
+    "ru_description": "Мой сайт на Beacons, описывающий мои услуги."
+  },
+  {
     "description": "Selling landing page of IPhone13 Pro contains goods cards, drop-down charachteristics of good and additional gadgets",
     "id": "50051752b",
     "is_my_design": false,
@@ -107,15 +116,15 @@ export default [
     "photo": "site-covers/iphone13pro.webp",
     "ru_description": "Продающий лендинг IPhone13 Pro. На сайте имеются выпадающие меню характеристик товара и подгрузка дополнительных гаджетов"
   },
-  {
-    "description": "Online store that sells gaming equipment and games themselves. The site has funtional cart where you can add goods or delete them and submit an order",
-    "id": "50126638b",
-    "is_my_design": false,
-    "link": "https://victoriaokazaki.github.io/ozon/",
-    "name": "O-ZONE",
-    "photo": "site-covers/ozon.webp",
-    "ru_description": "Интернет-магазин геймерских товаров и игр. На сайте есть функционирующая корзина, куда можно добавлять товары или удалять их, а также подтверждать заказ"
-  },
+  // {
+  //   "description": "Online store that sells gaming equipment and games themselves. The site has funtional cart where you can add goods or delete them and submit an order",
+  //   "id": "50126638b",
+  //   "is_my_design": false,
+  //   "link": "https://victoriaokazaki.github.io/ozon/",
+  //   "name": "O-ZONE",
+  //   "photo": "site-covers/ozon.webp",
+  //   "ru_description": "Интернет-магазин геймерских товаров и игр. На сайте есть функционирующая корзина, куда можно добавлять товары или удалять их, а также подтверждать заказ"
+  // },
   {
     "description": "Home page of multipage site related to apartment rent company",
     "id": "50131681b",
