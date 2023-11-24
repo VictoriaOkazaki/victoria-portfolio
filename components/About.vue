@@ -41,6 +41,8 @@
                     <ul class="about__job">
                         <li class="about__job-item text font2">{{ t('job-13') }}</li>
                         <li class="about__job-item text font2">{{ t('job-14') }}</li>
+                        <li class="about__job-item text font2">{{ t('job-15') }}</li>
+                        <li class="about__job-item text font2">{{ t('job-16') }}</li>
                     </ul>
                 </li>
             </ul>
@@ -54,39 +56,43 @@
         "title": "About me",
         "text": "My name is Victoria and i live in Baku city. I graduated from Moscow State Univercity at 2020. I started creating sites from Tilda and Webflow constructors. Then I got my hand in HTML, CSS, Javascript and SCSS preprocessor. I worked with the Gulp assembler, then decided to use something more modern and convenient. So I switched to using Vue and Nuxt3 in my work. In 2023, I decided to master web design and now I can create a prototype and website design myself.",
         "subtitle": "What I can offer you:",
-        "job-1": "an interview with you (orally, in writing) to draw up technical specifications, competitor analysis;",
-        "job-2": "site layout preparation in Figma;",
-        "job-3": "logo and favicon development;",
-        "job-4": "selecting photos (from stock or neural networks) and writing texts - if they don’t exist;",
-        "job-5": "making a website with HTML, CSS (or SASS) and Javascript;",
-        "job-6": "connecting animations;",
-        "job-7": "making adaptation of websites for various devices;",
+        "job-1": "an interview with you (orally, in writing) to draw up technical specifications, competitor analysis",
+        "job-2": "site prototype and layout preparation in Figma",
+        "job-3": "logo and favicon development",
+        "job-4": "content prepare — photos (from stock or neural networks) and writing texts",
+        "job-5": "making a website with HTML, CSS (or SASS) and Javascript",
+        "job-6": "connecting animations",
+        "job-7": "making adaptation of websites for various devices",
         "job-8": "building layouts on Tilda using Zero blocks (i work also with Flexbe and Tinkoff constructors);",
-        "job-9": "building a website using Wordpress themes and Elementor templates;",
-        "job-10": "development of an admin panel for content management;",
+        "job-9": "building a website using Wordpress themes and Elementor constructor",
+        "job-10": "development of an admin panel for content management",
         "job-11": "writing the main meta tags (title, description, h1) and adding the site to the results of Google and Yandex browsers;",
-        "job-12": "organizing CMS systems on Wordpress and database connect;",
-        "job-13": "site transfer to hosting, domain connection;",
-        "job-14": "website development and problem solving."
+        "job-12": "landing a website on CMS Wordpress, creating an online store using WooCommerce",
+        "job-13": "site transfer to hosting, domain connection",
+        "job-14": "primary SEO optimization",
+        "job-15": "connecting statistics collection — Yandex.Metrica and Google Analytics",
+        "job-16": "website development and problem solving."
     },
     "ru": {
         "title": "Обо мне",
         "text": "Меня зовут Виктория, и я живу в Баку. Окончила в 2020 году Московский Государственный Университет. Изучение веб-разработки начала с конструкторов Tilda и Webflow. Затем освоила HTML, CSS, Javascript и препроцессор SCSS. Работала со сборщиком Gulp, затем решила использовать что-то более современное и удобное. Так перешла к использованию в работе Vue и Nuxt3. В 2023 году я решила освоить веб-дизайн и теперь сама могу создать прототип и дизайн сайта.",
         "subtitle": "Что я могу вам предложить:",
-        "job-1": "интервью с вами (устно, письменно) для составления технического задания, анализ конкурентов;",
-        "job-2": "разработку макета сайта в Figma;",
-        "job-3": "разработку логотипа и фавикона;",
-        "job-4": "подбор фото (со стоков или нейросети) и написание текстов - если их нет;",
-        "job-5": "вёрстку сайта по готовому макету в Figma;",
-        "job-6": "подключение анимаций;",
-        "job-7": "адаптацию сайта для различных устройств;",
-        "job-8": "создание сайта на Tilda с использованием зеро-блоков (также работаю с Flexbe и Тинькоф конструкторами);",
-        "job-9": "построениe сайта с использованием тем Wordpress и шаблонов Elementor;",
-        "job-10": "разработку админ-панели для управления контентом;",
-        "job-11": "прописывание основных мета-тегов (title, description, h1) и добавление сайта в выдачу Google и Яндекс браузеров;",
-        "job-12": "посадку сайта на CMS Wordpress;",
-        "job-13": "перенос сайта на хостинг, подключение домена;",
-        "job-14": "доработку сайта и решение различных проблем."
+        "job-1": "интервью с вами (устно, письменно) для составления технического задания, анализ конкурентов",
+        "job-2": "разработку прототипа и  макета сайта в Figma",
+        "job-3": "разработку логотипа и фавикона",
+        "job-4": "подготовку контента — подбор фото (со стоков или нейросети) и написание текстов",
+        "job-5": "вёрстку сайта по готовому макету в Figma",
+        "job-6": "подключение анимаций",
+        "job-7": "адаптацию сайта для различных устройств",
+        "job-8": "создание сайта на Tilda с использованием зеро-блоков (также работаю с Flexbe и Тинькоф конструкторами)",
+        "job-9": "построениe сайта с использованием тем Wordpress и конструктора Elementor",
+        "job-10": "разработку админ-панели для управления контентом",
+        "job-11": "прописывание основных мета-тегов (title, description, h1) и добавление сайта в выдачу Google и Яндекс браузеров",
+        "job-12": "посадку сайта на CMS Wordpress, создание интернет-магазина с помощью WooCommerce",
+        "job-13": "перенос сайта на хостинг, подключение домена",
+        "job-14": "первичную Seo-оптимизацию",
+        "job-15": "подключение сбора статистики — Яндекс.Метрика и Google Analytics",
+        "job-16": "доработку сайта и решение различных проблем."
     }
 }
 </i18n>
