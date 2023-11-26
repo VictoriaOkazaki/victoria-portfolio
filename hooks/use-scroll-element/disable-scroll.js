@@ -8,10 +8,15 @@ var keys = { 37: 1, [KEY_UP_CODE]: 1, 39: 1, [KEY_DOWN_CODE]: 1 };
 let _onScrollTop = () => { }
 let _onScrollDown = () => { }
 
-let prevTouchScreenY = null
+let touchPos = 0
+const ontouchstart = (e) => {
+    // console.log('update touch pos', touchPos)
+    touchPos = e.changedTouches[0].clientY;
+}
+
 function preventDefault(e) {
     e.preventDefault();
-    const { wheelDeltaY, touches, keyCode } = e
+    const { wheelDeltaY, changedTouches, keyCode } = e
     // console.log('prevent default', e)
 
     let scrollDeltaY = 0
@@ -20,23 +25,20 @@ function preventDefault(e) {
         scrollDeltaY = wheelDeltaY
     }
 
-    if (touches !== undefined && touches[0]) {
-        const { screenY: touchScreenY } = touches[0]
-        // console.log('prevented touch touchScreenY', touchScreenY, 'prevTouchScreenY', prevTouchScreenY)
-        if (prevTouchScreenY !== null) {
-            scrollDeltaY = touchScreenY - prevTouchScreenY
-            prevTouchScreenY = null
-        } else {
-            prevTouchScreenY = touchScreenY
-        }
+    if (changedTouches !== undefined && changedTouches[0]) {
+        let newTouchPos = changedTouches[0].clientY;
+        // newTouchPos > touchPos then finger moving down
+        scrollDeltaY = newTouchPos - touchPos
     }
 
     if (scrollDeltaY) {
         // console.log('prevented scrollDeltaY', scrollDeltaY)
         if (scrollDeltaY > 0) {
+            // console.log('SCROLL TOP')
             _onScrollTop()
         }
         if (scrollDeltaY < 0) {
+            // console.log('SCROLL DOWN')
             _onScrollDown()
         }
     }
@@ -83,6 +85,7 @@ export function disableScroll() {
     window.addEventListener('DOMMouseScroll', preventDefault, false); // older FF
     window.addEventListener(wheelEvent, preventDefault, wheelOpt); // modern desktop
     window.addEventListener('touchmove', preventDefault, wheelOpt); // mobile
+    window.addEventListener('touchstart', ontouchstart, wheelOpt)
     window.addEventListener('keydown', preventDefaultForScrollKeys, false);
 }
 
@@ -92,9 +95,9 @@ export function enableScroll() {
         throw new Error('Call prepareForDisableScroll first')
     }
     // console.log('enable-scroll')
-    prevTouchScreenY = null
     window.removeEventListener('DOMMouseScroll', preventDefault, false);
     window.removeEventListener(wheelEvent, preventDefault, wheelOpt);
     window.removeEventListener('touchmove', preventDefault, wheelOpt);
+    window.removeEventListener('touchstart', ontouchstart, wheelOpt)
     window.removeEventListener('keydown', preventDefaultForScrollKeys, false);
 }
