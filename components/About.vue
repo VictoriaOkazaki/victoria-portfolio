@@ -9,8 +9,12 @@
         <div class="about__bottom">
             <h3 class="about__bottom-title font1">{{ t('subtitle') }}</h3>
             <ul class="about__jobs" ref="jobsRef">
-                <li class="about__jobs-item" v-for="job, index in jobs" :class="{ 'unvisible': index !== activeIndex }">
-                    <img :src="job.path" alt="" class="about__jobs-img">
+                <li class="about__jobs-item" v-for="job, index in jobs"
+                    :class="{ 'unvisible': index !== activeIndex, 'active': index === activeIndex }">
+                    <div class="about__job-count">
+                        <img :src="job.path" alt="" class="about__jobs-img">
+                        <div class="font2">{{ activeIndex + 1 }} / {{ jobs.length }}</div>
+                    </div>
                     <ul class="about__job">
                         <li class="about__job-item text font2" v-for="jobId in job.ids">{{ t(`job-${jobId}`) }}</li>
                     </ul>
@@ -142,6 +146,22 @@ useScrollElement({
 <style lang="scss" scoped>
 .unvisible {
     opacity: 0;
+    display: none !important;
+}
+
+.active {
+    animation: fadeIn 1s ease;
+    opacity: 1;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 .about {
@@ -192,27 +212,32 @@ useScrollElement({
         width: 74%;
         border: 2px var(--border-color) solid;
         border-radius: 40px 0px;
-        padding: 40px 10px 40px 70px;
+        padding: 40px;
         position: relative;
         min-height: 300px;
     }
 
     &__jobs-item {
-        position: absolute;
         display: flex;
         align-items: flex-start;
-        transition: opacity 0.5s ease-in-out;
     }
 
     &__jobs-img {
         width: 42px;
         height: 42px;
-        margin-right: 20px;
+        margin-bottom: 10px;
     }
 
     &__job {
         display: flex;
         flex-direction: column;
+    }
+
+    &__job-count {
+        display: flex;
+        flex-direction: column;
+        margin-right: 20px;
+        text-wrap: nowrap;
     }
 
     &__job-item {
@@ -252,7 +277,7 @@ useScrollElement({
 
         &__jobs {
             width: 84%;
-            padding: 30px 10px 30px 50px;
+            padding: 30px;
         }
 
         &__jobs-img {
@@ -303,14 +328,16 @@ useScrollElement({
         }
 
         &__jobs {
-            padding-right: 20px;
-            padding-left: 20px;
+            padding: 20px;
+        }
+
+        &__job-count {
+            margin-right: 10px;
         }
 
         &__jobs-img {
             width: 28px;
             height: 28px;
-            margin-right: 10px;
         }
     }
 }
