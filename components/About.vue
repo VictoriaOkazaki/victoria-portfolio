@@ -8,41 +8,11 @@
         </div>
         <div class="about__bottom">
             <h3 class="about__bottom-title font1">{{ t('subtitle') }}</h3>
-            <ul class="about__jobs">
-                <li class="about__jobs-item">
-                    <img :src="job1Path" alt="" class="about__jobs-img">
+            <ul class="about__jobs" ref="jobsRef">
+                <li class="about__jobs-item" v-for="job, index in jobs" :class="{ 'unvisible': index !== activeIndex }">
+                    <img :src="job.path" alt="" class="about__jobs-img">
                     <ul class="about__job">
-                        <li class="about__job-item text font2">{{ t('job-1') }}</li>
-                        <li class="about__job-item text font2">{{ t('job-2') }}</li>
-                        <li class="about__job-item text font2">{{ t('job-3') }}</li>
-                        <li class="about__job-item text font2">{{ t('job-4') }}</li>
-                    </ul>
-                </li>
-                <li class="about__jobs-item">
-                    <img :src="job2Path" alt="" class="about__jobs-img">
-                    <ul class="about__job">
-                        <li class="about__job-item text font2">{{ t('job-5') }}</li>
-                        <li class="about__job-item text font2">{{ t('job-6') }}</li>
-                        <li class="about__job-item text font2">{{ t('job-7') }}</li>
-                        <li class="about__job-item text font2">{{ t('job-8') }}</li>
-                        <li class="about__job-item text font2">{{ t('job-9') }}</li>
-                    </ul>
-                </li>
-                <li class="about__jobs-item">
-                    <img :src="job3Path" alt="" class="about__jobs-img">
-                    <ul class="about__job">
-                        <li class="about__job-item text font2">{{ t('job-10') }}</li>
-                        <li class="about__job-item text font2">{{ t('job-11') }}</li>
-                        <li class="about__job-item text font2">{{ t('job-12') }}</li>
-                    </ul>
-                </li>
-                <li class="about__jobs-item">
-                    <img :src="job4Path" alt="" class="about__jobs-img">
-                    <ul class="about__job">
-                        <li class="about__job-item text font2">{{ t('job-13') }}</li>
-                        <li class="about__job-item text font2">{{ t('job-14') }}</li>
-                        <li class="about__job-item text font2">{{ t('job-15') }}</li>
-                        <li class="about__job-item text font2">{{ t('job-16') }}</li>
+                        <li class="about__job-item text font2" v-for="jobId in job.ids">{{ t(`job-${jobId}`) }}</li>
                     </ul>
                 </li>
             </ul>
@@ -107,6 +77,7 @@ import job3 from '../assets/images/jobs/job-3.svg'
 import job3Light from '../assets/images/jobs/job-3-l.svg'
 import job4 from '../assets/images/jobs/job-4.svg'
 import job4Light from '../assets/images/jobs/job-4-l.svg'
+import { useScrollElement } from '~~/hooks/use-scroll-element'
 
 const { t } = useI18n({
     useScope: 'local'
@@ -137,9 +108,42 @@ const job4Path = computed(() => {
     }
     return job4
 })
+
+const jobs = computed(() => [{
+    path: job1Path.value,
+    ids: [1, 2, 3, 4]
+},
+{
+    path: job2Path.value,
+    ids: [5, 6, 7, 8, 9]
+},
+{
+    path: job3Path.value,
+    ids: [10, 11, 12]
+},
+{
+    path: job4Path.value,
+    ids: [13, 14, 15, 16]
+}])
+
+const activeIndex = ref(0)
+const jobsRef = ref(null)
+
+useScrollElement({
+    getActiveIndex: () => activeIndex.value,
+    setActiveIndex: (index) => {
+        activeIndex.value = index
+    },
+    getElement: () => jobsRef.value,
+    getSlidesLength: () => jobs.value.length
+})
 </script>
 
 <style lang="scss" scoped>
+.unvisible {
+    opacity: 0;
+}
+
 .about {
     &__inner {
         padding: 100px 0;
@@ -189,20 +193,15 @@ const job4Path = computed(() => {
         border: 2px var(--border-color) solid;
         border-radius: 40px 0px;
         padding: 40px 10px 40px 70px;
+        position: relative;
+        min-height: 300px;
     }
 
     &__jobs-item {
+        position: absolute;
         display: flex;
         align-items: flex-start;
-        margin: 30px 0;
-
-        &:first-child {
-            margin-top: 0;
-        }
-
-        &:last-child {
-            margin-bottom: 0;
-        }
+        transition: opacity 0.5s ease-in-out;
     }
 
     &__jobs-img {
