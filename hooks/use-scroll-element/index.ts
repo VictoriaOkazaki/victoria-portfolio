@@ -43,14 +43,10 @@ export function useScrollElement({
     const onScroll = () => {
         if (onScrollDisabled) return
         const element = getElement()
-        const rect = element.getBoundingClientRect();
-        const elemToTop = rect.top;
-        const elemToBottom = window.innerHeight - rect.bottom
-        const isVisible = elemToTop >= 0 && elemToBottom >= 0;
+        const isVisible = getIsVisible(element)
 
         if (isVisible && !scrollDisabled) {
             // console.log('disable scroll')
-            scrollDisabled = true
             _disableScroll()
         }
     }
