@@ -238,7 +238,7 @@ const { scrollBottom, scrollTop } = useScrollElement({
         border-radius: 40px 0px;
         padding: 40px;
         position: relative;
-        min-height: 350px;
+        min-height: 300px;
     }
 
     &__jobs-item {
@@ -303,6 +303,7 @@ const { scrollBottom, scrollTop } = useScrollElement({
         &__jobs {
             width: 84%;
             padding: 30px;
+            min-height: 350px;
         }
 
         &__jobs-img {
