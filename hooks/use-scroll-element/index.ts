@@ -51,7 +51,7 @@ export function useScrollElement({
         }
     }
 
-    const onPreventedScrollTop = createThrottlingFunction(() => {
+    const scrollTop = () => {
         // console.log('onPreventedScrollTop')
         const newIndex = getActiveIndex() - 1
 
@@ -61,9 +61,10 @@ export function useScrollElement({
             // console.log('Enable scroll (onPreventedScrollTop)')
             _enableScroll()
         }
-    }, 1000)
+    }
+    const onPreventedScrollTop = createThrottlingFunction(scrollTop, 1000)
 
-    const onPreventedScrollBottom = createThrottlingFunction(() => {
+    const scrollBottom = () => {
         // console.log('onPreventedScrollBottom')
         const newIndex = getActiveIndex() + 1
 
@@ -74,7 +75,8 @@ export function useScrollElement({
             // console.log('Enable scroll (onPreventedScrollBottom)')
             _enableScroll()
         }
-    }, 1000)
+    }
+    const onPreventedScrollBottom = createThrottlingFunction(scrollBottom, 1000)
 
     onMounted(() => {
         prepareForDisableScroll({
@@ -90,6 +92,11 @@ export function useScrollElement({
         window.removeEventListener('scroll', onScroll)
         clearInterval(interval)
     })
+
+    return {
+        scrollTop,
+        scrollBottom
+    }
 }
 
 function getIsVisible(element: HTMLElement) {

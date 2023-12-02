@@ -18,6 +18,10 @@
                     <ul class="about__job">
                         <li class="about__job-item text font2" v-for="jobId in job.ids">{{ t(`job-${jobId}`) }}</li>
                     </ul>
+                    <div class="about__bottom-arrow-cont">
+                        <img @click="scrollTop" src="../assets/images/arrow.svg" alt="arrow" class="arrow top">
+                        <img @click="scrollBottom" src="../assets/images/arrow.svg" alt="arrow" class="arrow">
+                    </div>
                 </li>
             </ul>
         </div>
@@ -133,7 +137,7 @@ const jobs = computed(() => [{
 const activeIndex = ref(0)
 const jobsRef = ref(null)
 
-useScrollElement({
+const { scrollBottom, scrollTop } = useScrollElement({
     getActiveIndex: () => activeIndex.value,
     setActiveIndex: (index) => {
         activeIndex.value = index
@@ -144,6 +148,16 @@ useScrollElement({
 </script>
 
 <style lang="scss" scoped>
+.arrow {
+    width: 45px;
+    height: 45px;
+    margin-top: 10px;
+}
+
+.arrow.top {
+    rotate: 180deg;
+}
+
 .unvisible {
     opacity: 0;
     display: none !important;
@@ -208,13 +222,23 @@ useScrollElement({
         color: var(--text-color-2);
     }
 
+    &__bottom-arrow-cont {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        opacity: .5;
+    }
+
     &__jobs {
+        position: relative;
         width: 74%;
         border: 2px var(--border-color) solid;
         border-radius: 40px 0px;
         padding: 40px;
         position: relative;
-        min-height: 300px;
+        min-height: 350px;
     }
 
     &__jobs-item {
@@ -231,6 +255,7 @@ useScrollElement({
     &__job {
         display: flex;
         flex-direction: column;
+        width: 75%;
     }
 
     &__job-count {
@@ -311,6 +336,7 @@ useScrollElement({
 }
 
 @media (max-width: 500px) {
+
     .about {
         &__inner {
             padding: 60px 0;
