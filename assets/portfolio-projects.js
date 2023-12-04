@@ -63,111 +63,102 @@ export default [
     "ru_description": "Сверстала сайт для NFT проекта по предоставленному клиентом макету, самостоятельно реализовала непрерывно движущийся слайдер из картинок с использованием Javascript. Проект закрыт, поэтому он на Гитхабе."
   },
   {
-    "description": "Anastasiya copyrighter portfolio with advantages, contacts and works divided by categories. Category images are made by neural networks.",
+    "description": "I built a portfolio website for a copywriter using the free version of Tilda. Links to article categories lead to Google Docs. Images of work categories are created by neural networks.",
     "id": "12gfg8546g55k",
     "is_my_design": true,
     "link": "https://anastasiya-copyrighter.tilda.ws/",
     "name": "Copyrighter portfolio",
     "photo": "site-covers/nastya.webp",
-    "ru_description": "Портфолио копирайтера с преимуществами, контактами и работами, разделенными по категориям. Изображения категорий созданы нейронными сетями."
+    "ru_description": "Собрала сайт-портфолио для копирайтера на бесплатной версии Тильды. Ссылки на категории статей ведут в Гугл Документы. Изображения категорий работ созданы нейронными сетями."
   },
   {
-    "description": "Home page of multipage site that sells dietetic food for cats",
-    "id": "10027373k",
-    "is_my_design": false,
-    "link": "https://victoriaokazaki.github.io/cat-energy",
-    "name": "Cat energy",
-    "photo": "site-covers/cat-energy.webp",
-    "ru_description": "Главная страница многостраничного сайта компании по продаже диетического питания для котов"
-  },
-  {
-    "description": "Information landing page of apartment complex where a client can view the whole building and flats` schemes on each floor",
-    "id": "10024343b",
-    "is_my_design": false,
-    "link": "https://victoriaokazaki.github.io/melody/",
-    "name": "AC «Melody»",
-    "photo": "site-covers/melody.webp",
-    "ru_description": "Информационный лендинг жилищного комплекса, на котором клиент может осмотреть все здание и схемы квартир на каждом этаже"
-  },
-  {
-    "description": "Selling landing page of chrismas trees with «sale ends» timer, goods descriptions and pay methods",
-    "id": "30052979b",
-    "is_my_design": false,
-    "link": "https://victoriaokazaki.github.io/chrismas-trees/",
-    "name": "Chrismas Trees",
-    "photo": "site-covers/chrismas-trees.webp",
-    "ru_description": "Продающий лендинг новогодних елок с таймером окончания распродажи и методами оплаты"
-  },
-  {
-    "description": "Multipage site of furniture design studio with galleries, sliders, blog and Google map",
-    "id": "50047745b",
-    "is_my_design": false,
-    "link": "https://victoriaokazaki.github.io/desire/app/",
-    "name": "DESIRE",
-    "photo": "site-covers/desire.webp",
-    "ru_description": "Многостраничный сайт студии дизайнерской мебели. На сайте имеются галерея, слайдеры, блог и Google-карта"
-  },
-  {
-    "description": "My Beacons page describing my services.",
-    "id": "12fdfdg500g55k",
-    "is_my_design": true,
-    "link": "https://beacons.ai/okazakivictoria",
-    "name": "My Beacons site",
-    "photo": "site-covers/beacons.webp",
-    "ru_description": "Мой сайт на Beacons, описывающий мои услуги."
-  },
-  {
-    "description": "Selling landing page of IPhone13 Pro contains goods cards, drop-down charachteristics of good and additional gadgets",
-    "id": "50051752b",
-    "is_my_design": false,
-    "link": "https://victoriaokazaki.github.io/iphone13pro/",
-    "name": "IPhone 13 Pro",
-    "photo": "site-covers/iphone13pro.webp",
-    "ru_description": "Продающий лендинг IPhone13 Pro. На сайте имеются выпадающие меню характеристик товара и подгрузка дополнительных гаджетов"
-  },
-  // {
-  //   "description": "Online store that sells gaming equipment and games themselves. The site has funtional cart where you can add goods or delete them and submit an order",
-  //   "id": "50126638b",
-  //   "is_my_design": false,
-  //   "link": "https://victoriaokazaki.github.io/ozon/",
-  //   "name": "O-ZONE",
-  //   "photo": "site-covers/ozon.webp",
-  //   "ru_description": "Интернет-магазин геймерских товаров и игр. На сайте есть функционирующая корзина, куда можно добавлять товары или удалять их, а также подтверждать заказ"
-  // },
-  {
-    "description": "Home page of multipage site related to apartment rent company",
-    "id": "50131681b",
-    "is_my_design": false,
-    "link": "https://victoriaokazaki.github.io/to2rent/",
-    "name": "to2rent",
-    "photo": "site-covers/to2rent.webp",
-    "ru_description": "Главная страница многостраничного сайта компании по аренде апартаментов"
-  },
-  {
-    "description": "Tour company's web application that allows clients to select a tour and book seats in plane",
-    "id": "50131681a",
-    "is_my_design": false,
-    "link": "https://victoriaokazaki.github.io/plane-seats/",
-    "name": "Plane seats",
-    "photo": "site-covers/plane-seats.webp",
-    "ru_description": "Веб-приложение туристической фирмы, позволяющее клиентам выбрать тур и забронировать места в самолете"
-  },
-  {
-    "description": "Game screenwriter portfolio built on Tilda using Zero blocks with several sections and amazing animation",
-    "id": "50132022b",
-    "is_my_design": false,
-    "link": "http://victoriasportfolio.tilda.ws/",
-    "name": "Creative Portfolio",
-    "photo": "site-covers/creative-portfolio.webp",
-    "ru_description": "Портфолио сценариста видеоигр, собранное на конструкторе Tilda с использованием зеро-блоков. Сайт включает в себя несколько секций и красивую анимацию"
-  },
-  {
-    "description": "Coffee shop landing built on Webflow. The site has nice animation effects and contains blog and a little coffee store",
+    "description": "I built coffee shop landing on Webflow. The site has nice animation effects and contains blog and a little coffee store. Educational project.",
     "id": "50133735b",
     "is_my_design": false,
     "link": "https://victorias-coffee-shop.webflow.io/",
     "name": "COFFEE FACTORY",
     "photo": "site-covers/coffee-shop.webp",
-    "ru_description": "Лендинг кофе-шопа, собранный на Webflow. На сайте присутствует приятная анимация, а также блог и небольшой онлайн-магазин кофе"
-  }
+    "ru_description": "Собрала лендинг кофе-шопа на Webflow. На сайте присутствует приятная анимация, а также блог и небольшой онлайн-магазин кофе. Учебный проект."
+  },
+  {
+    "description": "I markuped a website for selling dietary food for cats using a ready-made layout. Implemented a before/after progress bar using canvas and Javascript. Educational project.",
+    "id": "10027373k",
+    "is_my_design": false,
+    "link": "https://victoriaokazaki.github.io/cat-energy",
+    "name": "Cat energy",
+    "photo": "site-covers/cat-energy.webp",
+    "ru_description": "Сверстала сайт по продаже диетического питания для котов по готовому макету. Реализовала шкалу прогресса «до / после» с использованием canvas и Javascript. Учебный проект."
+  },
+  {
+    "description": "I markuped a landing page for a apartment complex based on a ready-made layout. The site has implemented the ability to view the entire building by floor and diagrams of apartments on each floor using Javascript. Educational project.",
+    "id": "10024343b",
+    "is_my_design": false,
+    "link": "https://victoriaokazaki.github.io/melody/",
+    "name": "AC «Melody»",
+    "photo": "site-covers/melody.webp",
+    "ru_description": "Сверстала лендинг жилищного комплекса по готовому макету. На сайте реализовала возможность осмотреть все здание по этажам и схемы квартир на каждом этаже с помощью Javascript. Учебный проект."
+  },
+  {
+    "description": "I markuped a website for selling Christmas trees using a ready-made layout. I wrote a timer for the end of a sale using Javascript. Educational project.",
+    "id": "30052979b",
+    "is_my_design": false,
+    "link": "https://victoriaokazaki.github.io/chrismas-trees/",
+    "name": "Chrismas Trees",
+    "photo": "site-covers/chrismas-trees.webp",
+    "ru_description": "Сверстала сайт для продажи елок по готовому макету. Написала таймер окончания распродажи с использованием Javascript. Учебный проект."
+  },
+  {
+    "description": "I markuped a multi-page website for a furniture design studio using a ready-made layout. The site has a gallery, sliders, blog and Google map. Educational project.",
+    "id": "50047745b",
+    "is_my_design": false,
+    "link": "https://victoriaokazaki.github.io/desire/app/",
+    "name": "DESIRE",
+    "photo": "site-covers/desire.webp",
+    "ru_description": "Сверстала многостраничный сайт студии дизайнерской мебели по готовому макету. На сайте имеются галерея, слайдеры, блог и Google-карта. Учебный проект."
+  },
+  {
+    "description": "I built my Beacons page describing my services.",
+    "id": "12fdfdg500g55k",
+    "is_my_design": true,
+    "link": "https://beacons.ai/okazakivictoria",
+    "name": "My Beacons site",
+    "photo": "site-covers/beacons.webp",
+    "ru_description": "Собрала свой сайт на Beacons, описывающий мои услуги."
+  },
+  {
+    "description": "I markuped the landing page for IPhone13 Pro. On the site, I implemented drop-down menus of product characteristics and loading of additional gadgets. Educational project.",
+    "id": "50051752b",
+    "is_my_design": false,
+    "link": "https://victoriaokazaki.github.io/iphone13pro/",
+    "name": "IPhone 13 Pro",
+    "photo": "site-covers/iphone13pro.webp",
+    "ru_description": "Сверстала лендинг IPhone13 Pro. На сайте реализовала выпадающие меню характеристик товара и подгрузку дополнительных гаджетов. Учебный проект."
+  },
+  {
+    "description": "I wrote a web application for a travel company that allows clients to select a tour and book seats on a plane using Javascript. Educational project.",
+    "id": "50131681a",
+    "is_my_design": false,
+    "link": "https://victoriaokazaki.github.io/plane-seats/",
+    "name": "Plane seats",
+    "photo": "site-covers/plane-seats.webp",
+    "ru_description": "Написала веб-приложение туристической фирмы, позволяющее клиентам выбрать тур и забронировать места в самолете с использованием Javascript."
+  },
+  {
+    "description": "I built a portfolio of a video game screenwriter using the Tilda constructor's Zero blocks. The site includes several sections and interesting animations. Educational project.",
+    "id": "50132022b",
+    "is_my_design": false,
+    "link": "http://victoriasportfolio.tilda.ws/",
+    "name": "Creative Portfolio",
+    "photo": "site-covers/creative-portfolio.webp",
+    "ru_description": "Собрала портфолио сценариста видеоигр на конструкторе Tilda с использованием зеро-блоков. Сайт включает в себя несколько секций и интересные анимации."
+  },
+  {
+    "description": "I markuped home page of multipage site related to apartment rent company using ready layout. Educational project.",
+    "id": "50131681b",
+    "is_my_design": false,
+    "link": "https://victoriaokazaki.github.io/to2rent/",
+    "name": "to2rent",
+    "photo": "site-covers/to2rent.webp",
+    "ru_description": "Сверстала главную страницу многостраничного сайта компании по аренде апартаментов по готовому макету. Учебный проект."
+  },
 ]
