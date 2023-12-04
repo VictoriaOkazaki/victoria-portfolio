@@ -84,13 +84,13 @@ export function useScrollElement({
             onScrollDown: onPreventedScrollBottom
         })
         // window.enableScroll = _enableScroll
-        window.addEventListener('scroll', onScroll)
-        interval = setInterval(checkElementVisible, 1000)
+        // window.addEventListener('scroll', onScroll)
+        // interval = setInterval(checkElementVisible, 1000)
     })
 
     onBeforeUnmount(() => {
-        window.removeEventListener('scroll', onScroll)
-        clearInterval(interval)
+        // window.removeEventListener('scroll', onScroll)
+        // clearInterval(interval)
     })
 
     return {

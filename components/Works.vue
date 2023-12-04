@@ -3,8 +3,10 @@
         <h2 class="works__title title font1">{{ t('title') }}</h2>
         <ul class="works__list">
             <li class="works__item" v-for="project in curProjects">
-                <img class="works__item-img" :src="project.photo" alt="website cover">
-                <h4 class="works__item-title font1">{{ project.name }}</h4>
+                <div class="">
+                    <img class="works__item-img" :src="project.photo" alt="website cover">
+                    <h4 class="works__item-title font1">{{ project.name }}</h4>
+                </div>
                 <p class="works__item-text text font2">{{ locale === 'ru' ? project.ru_description : project.description }}
                 </p>
                 <a class="works__item-link btn-d font2" :href="project.link" target="_blank">{{ t('btn-1') }}</a>
@@ -79,7 +81,8 @@ const { t } = useI18n({
     &__list {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        grid-gap: 30px;
+        gap: 30px;
+        width: 100%;
     }
 
     &__item {

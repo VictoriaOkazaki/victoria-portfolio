@@ -1,57 +1,66 @@
 export default [
   {
-    "description": "Landing page of an expert of marketplaces offering services for individual support in entering marketplaces.",
+    "description": "I have improved the Customify WordPress theme and added information blocks using Elementor. Conducted SEO optimization, added pages of all products and categories to Google and Yandex results.",
+    "id": "12fdfgfg40g55k",
+    "is_my_design": true,
+    "link": "https://agrohim-ug-93.ru/",
+    "name": "Агрохим-Юг-93",
+    "photo": "site-covers/agrohim.webp",
+    "ru_description": "Мной доработана тема Вордпресс Customify, добавлены информационные блоки с помощью Elementor. Провела SEO-оптимизацию, добавила страницы всех товаров и категорий в выдачу Google и Яндекс."
+  },
+  {
+    "description": "I built a website for an expert using the Tinkoff constructor using a text prototype from a client. I designed covers for the first screen and product cards. I connected payment to the site by bank cards, as well as in installments.",
     "id": "12fgfg500g55k",
     "is_my_design": true,
     "link": "https://expert-pakhtusova.tb.ru/",
     "name": "Start business on marketplaces",
     "photo": "site-covers/svetlana-wb.webp",
-    "ru_description": "Сайт эксперта по маркетплейсам, предлагающий услуги по индивидуальному сопровождению по выходу на маркетплейсы."
+    "ru_description": "Собрала сайт для эксперта на конструкторе Тинькофф по текстовому прототипу от клиента. Нарисовала обложки для первого экрана и карточки товара. Подключила оплату на сайт банковскими картами, а также в рассрочку."
   },
   {
-    "description": "Multipage website of a vegetarian & vegan cafe. The site has a menu divided by categories, gallery, blog and shop pages, and also guests reviews collected from various paltforms. The possibility of booking a table by contacting WhatsApp has also been implemented.",
+    "description": "Developed a prototype, design and markup of a website for a cafe using Vue and Nuxt3. Wrote some of the texts. Added the site to the search results of Google and Yandex browsers. I created an admin panel for the client so that he could add new posts and products.",
     "id": "12fdfdgffgfg55k",
     "is_my_design": true,
     "link": "https://www.deramacafe.az/",
     "name": "De Rama Cafe",
     "photo": "site-covers/de-rama-cafe.webp",
-    "ru_description": "Многостраничный сайт вегетарианского и веганского кафе. На сайте есть меню, разделенное по категориям, галерея, страницы блога и магазина, а также отзывы гостей, собранные с различных платформ. Также реализована возможность бронирования столика через WhatsApp."
+    "ru_description": "Разработала прототип, дизайн и сверстала сайт для веган кафе с использованием Vue и Nuxt3. Написала часть текстов. Добавила сайт в выдачу браузеров Google и Яндекс. Создала админ-панель для клиента, чтобы он мог добавлять новые посты и товары."
   },
   {
-    "description": "Multipage website of a cafe with a library and art exhibits. The site has a menu page divided by categories, a booking page where you can reserve a table on certain date",
+    "description": "Developed a prototype, logo, design and markuped a website for a cafe. Implemented online store logic (filters, shopping cart, order page) and table reservations using Vue and Nuxt3. Educational project.",
     "id": "12fdfdg55k",
     "is_my_design": true,
     "link": "https://buenas-gallery.vercel.app/",
     "name": "Buendía’s Gallery",
     "photo": "site-covers/buendias.webp",
-    "ru_description": "Многостраничный сайт кафе с библиотекой и выставками искусств. На сайте имеется страница меню, разделенная по категориям, а также страница бронирования, где можно зарезервировать столик на определенную дату"
+    "ru_description": "Разработала прототип, логотип, дизайн и сверстала сайт для кафе. Реализовала логику интернет-магазина (фильтры, корзина, страница заказа) и резервацию столика с использованием Vue и Nuxt3. Учебный проект."
   },
   {
-    "description": "Multipage website of a cosmetics online-shop. The site has a goods filter and a funtional cart where you can add goods or delete them and submit an order",
+    "description": "Developed a prototype, design and markuped a website for a cosmetics store. Implemented the logic of the online store (filters, cart, order page) and adding blog posts using Vue and Nuxt3. Educational project.",
     "id": "12324gf3k",
     "is_my_design": true,
     "link": "https://victoriaokazaki.github.io/herbal-scincare/app/",
     "name": "Herbal Skincare",
     "photo": "site-covers/herbal-skincare.webp",
-    "ru_description": "Многостраничный сайт магазина, продающего косметику. На сайте имеется фильтр товаров и функциональная корзина, куда можно добавлять товары или удалять их, а также подтверждать заказ"
+    "ru_description": "Разработала прототип, дизайн и сверстала сайт для магазина косметики. Реализовала логику интернет-магазина (фильтры, корзина, страница заказа) и добавление постов в блог с помощью Vue и Nuxt3. Учебный проект."
   },
   {
-    "description": "Multipage website of law firm built on Wordpress using Liberis - Attorney Lawyer Theme",
+    "description": "I finalized the WordPress theme Liberis - Attorney Lawyer at the request of the client's for the website of a law firm, added multilingual functionality using the Polylang plugin, and worked with the blog.",
     "id": "12324343k",
     "is_my_design": false,
     "link": "https://prosperolegal.ch",
     "name": "Prospero Legal",
     "photo": "site-covers/prosperolegal.webp",
-    "ru_description": "Многостраничный сайт юридической фирмы, созданный в Wordpress на основании темы Liberis - Attorney Lawyer Theme"
+    "ru_description": "Доработала тему Вордпресс Liberis - Attorney Lawyer по желанию клиента для сайта юридической фирмы, добавила мультиязычность с помощью плагина Polylang, работала с блогом."
   },
   {
-    "description": "NFT platform where a user can mint random NFT pictures from the collection using cryptocurrency",
+    "description": "I markuped the website for NFT project according to the layout provided by the client, and independently implemented a continuously moving slider from pictures using Javascript. The project is closed, so it's on Github",
     "id": "10024343k",
     "is_my_design": false,
     "link": "https://victoriaokazaki.github.io/jungle-tigers-nft/app",
     "name": "Metajungles",
     "photo": "site-covers/metajungles.webp",
-    "ru_description": "Платформа NFT, на которой пользователь может отчеканить случайные NFT-картинки из коллекции, представленной на сайте, использую криптовалюту"
+    "ru_description": "Сверстала сайт для NFT проекта по предоставленному клиентом макету, самостоятельно реализовала непрерывно движущийся слайдер из картинок с использованием Javascript. Проект закрыт, поэтому он на Гитхабе."
   },
   {
     "description": "Anastasiya copyrighter portfolio with advantages, contacts and works divided by categories. Category images are made by neural networks.",
