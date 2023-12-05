@@ -2,7 +2,7 @@ export default [
   {
     "description": "I have improved the Customify WordPress theme and added information blocks using Elementor. Conducted SEO optimization, added pages of all products and categories to Google and Yandex results.",
     "id": "12fdfgfg40g55k",
-    "is_my_design": true,
+    "is_my_design": false,
     "link": "https://agrohim-ug-93.ru/",
     "name": "Агрохим-Юг-93",
     "photo": "site-covers/agrohim.webp",
