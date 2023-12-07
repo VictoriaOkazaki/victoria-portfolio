@@ -56,9 +56,21 @@
   position: relative;
 }
 
+@supports (min-height: 100dvh) {
+  .container-65 {
+    min-height: 100dvh;
+  }
+}
+
+@supports not (min-height: 100dvh) {
+  .container-65 {
+    min-height: 100vh;
+  }
+}
+
 .container-65 {
   width: 65%;
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -74,6 +86,7 @@
   background-color: var(--main-color);
   position: relative;
 }
+
 .footer__mark {
   position: absolute;
   top: 10px;
@@ -174,6 +187,7 @@
     margin: 0 1px;
   }
 }
+
 @media (max-width: 320px) {
   .container {
     padding: 0 20px;
