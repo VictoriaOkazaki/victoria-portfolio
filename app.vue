@@ -70,7 +70,7 @@
 
 .container-65 {
   width: 65%;
-  height: 100vh;
+  // height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
