@@ -54,13 +54,13 @@ export default [
     "ru_description": "Доработала тему Вордпресс Liberis - Attorney Lawyer по желанию клиента для сайта юридической фирмы, добавила мультиязычность с помощью плагина Polylang, работала с блогом."
   },
   {
-    "description": "I markuped the website for NFT project according to the layout provided by the client, and independently implemented a continuously moving slider from pictures using Javascript. The project is closed, so it's on Github",
+    "description": "I markuped the website for NFT project according to the layout provided by the client, and independently implemented a continuously moving slider from pictures using Javascript. I converted html to Wordpress theme. The project is closed, so it's on Github",
     "id": "10024343k",
     "is_my_design": false,
     "link": "https://victoriaokazaki.github.io/jungle-tigers-nft/app",
     "name": "Metajungles",
     "photo": "site-covers/metajungles.webp",
-    "ru_description": "Сверстала сайт для NFT проекта по предоставленному клиентом макету, самостоятельно реализовала непрерывно движущийся слайдер из картинок с использованием Javascript. Проект закрыт, поэтому он на Гитхабе."
+    "ru_description": "Сверстала сайт для NFT проекта по предоставленному клиентом макету, самостоятельно реализовала непрерывно движущийся слайдер из картинок с использованием Javascript. Посадила верстку на Вордпресс. Проект закрыт, поэтому он на Гитхабе."
   },
   {
     "description": "I built a portfolio website for a copywriter using the free version of Tilda. Links to article categories lead to Google Docs. Images of work categories are created by neural networks.",
