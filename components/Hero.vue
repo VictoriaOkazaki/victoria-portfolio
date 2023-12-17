@@ -49,8 +49,8 @@
                 <h2 class="hero__name font1">{{ t('name') }}</h2>
                 <h1 class="hero__title font3">{{ t('prof-1') }} <br> {{ t('prof-2') }}</h1>
             </div>
-            <div class="hero__btn-cont">
-                <a class="hero__btn font2" href="#contacts" @click.prevent="smoothScrollToSection('contacts')">
+            <div class="hero__btn-cont hero__btn" @click.prevent="smoothScrollToSection('contacts')">
+                <a class="font2">
                     {{ t('btn') }}
                 </a>
             </div>
@@ -261,6 +261,7 @@ const behancePath = computed(() => {
         align-items: center;
         text-align: center;
         background-image: var(--btn-grad);
+        align-self: flex-end;
 
         &:hover {
             background-image: var(--btn-grad-hov);
@@ -461,7 +462,7 @@ input:checked+.slider:before {
             font-size: 16px;
             line-height: 20px;
             display: flex;
-            width: 100%;
+            // width: 100%;
             justify-content: flex-end;
             background: none;
         }
@@ -475,6 +476,7 @@ input:checked+.slider:before {
             align-items: center;
             text-align: center;
             background-image: var(--btn-grad);
+            margin-bottom: 20px;
 
             &:hover {
                 background-image: var(--btn-grad-hov);
@@ -507,6 +509,7 @@ input:checked+.slider:before {
         &__btn-cont {
             font-size: 14px;
             line-height: 17px;
+            padding: 15px 0;
         }
 
         &__btn {
