@@ -3,17 +3,20 @@
         <h2 class="works__title title font1">{{ t('title') }}</h2>
         <ul class="works__list">
             <li class="works__item" v-for="project in curProjects">
-                <div class="">
-                    <img class="works__item-img" :src="project.photo" alt="website cover">
-                    <h4 class="works__item-title font1">{{ project.name }}</h4>
-                </div>
-                <p class="works__item-text text font2">{{ locale === 'ru' ? project.ru_description : project.description }}
-                </p>
-                <a class="works__item-link btn-d font2" :href="project.link" target="_blank">{{ t('btn-1') }}</a>
-                <!-- <div class="mark" v-show="project.is_my_design">
+                <a class="works__item-inner-link" :href="project.link" target="_blank">
+                    <div class="">
+                        <img class="works__item-img" :src="project.photo" alt="website cover">
+                        <h4 class="works__item-title font1">{{ project.name }}</h4>
+                    </div>
+                    <p class="works__item-text text font2">{{ locale === 'ru' ? project.ru_description : project.description
+                    }}
+                    </p>
+                    <a class="works__item-link btn-d font2" :href="project.link" target="_blank">{{ t('btn-1') }}</a>
+                    <!-- <div class="mark" v-show="project.is_my_design">
                     <div class="mark-text font2">{{ t('mark') }}</div>
                 </div> -->
-                <Mark v-show="project.is_my_design" />
+                    <Mark v-show="project.is_my_design" />
+                </a>
             </li>
         </ul>
         <button @click="addNextProjects" v-show="showMoreVisibility" class="works__btn btn-d font2" type="button">{{
@@ -94,6 +97,13 @@ const { t } = useI18n({
         flex-direction: column;
         justify-content: space-between;
         position: relative;
+    }
+
+    &__item-inner-link {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
     }
 
     &__item-img {
@@ -182,6 +192,7 @@ const { t } = useI18n({
 
     .works__item-text {
         font-size: 16px;
+        margin-top: 8px;
     }
 
     .works__item-link,
