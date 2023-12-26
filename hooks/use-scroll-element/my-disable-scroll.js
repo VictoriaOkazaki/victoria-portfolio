@@ -1,5 +1,7 @@
 import { LiteEvent } from "@/hooks/shared/lite-event";
 
+const CAN_LOCK_SCROLL = false;
+
 // left: 37, up: 38, right: 39, down: 40,
 // spacebar: 32, pageup: 33, pagedown: 34, end: 35, home: 36
 const KEY_UP_CODE = 38;
@@ -66,7 +68,6 @@ function getScrollDeltaY(e) {
     prevTouchPos = newTouchPos;
 
     isTouch = true;
-    needSpeedTimeDiff = 500;
   }
 
   const curSpeedSign = getNumberSign(scrollDeltaY);
@@ -78,8 +79,9 @@ function getScrollDeltaY(e) {
       startSpeedTime !== null ? (nowTime - startSpeedTime) / 1000 : 0;
 
     if (isTouch) {
-      const SCROLL_SPEED_DELTA = 35;
-      if (Math.abs(scrollDeltaY) > SCROLL_SPEED_DELTA) {
+      if (Math.abs(scrollDeltaY) > 45) {
+        speedDeltaYValue = Math.abs(scrollDeltaY * 2);
+      } else if (Math.abs(scrollDeltaY) > 25) {
         speedDeltaYValue = Math.abs(scrollDeltaY * 1.5);
       } else {
         speedDeltaYValue = 0;
@@ -183,7 +185,7 @@ const checkSmoothScrolling = (scrollDeltaY) => {
     //   console.warn("Smooth scroll direction changed. Set zero.");
     //   smoothScrollDeltaY = 0;
     // }
-    smoothScrollDeltaY += scrollDeltaY;
+    smoothScrollDeltaY += scrollDeltaY * 2;
     // console.log("Smooth scroll delta y changed", smoothScrollDeltaY);
     startScrollDetection();
     return true;
@@ -228,8 +230,8 @@ export function subscribeDisableScroll({
       needLockScrollBottom
     );
 
-    const locked = needLockScrollTop || needLockScrollBottom;
-    // locked = false;
+    const locked =
+      CAN_LOCK_SCROLL && (needLockScrollTop || needLockScrollBottom);
     if (locked) {
       console.warn("LOCK SCROLL!!!");
       lockTime = Date.now();
@@ -267,6 +269,7 @@ export function subscribeDisableScroll({
     if (curSmoothScrollDeltaY < 300) {
       isSmoothScrolling = false;
       console.log("Stop smooth scroll", curSmoothScrollDeltaY);
+      doScrollWithLock(curSmoothScrollDeltaY, "smooth");
       return;
     }
     console.log("Do next smooth scroll", curSmoothScrollDeltaY);
