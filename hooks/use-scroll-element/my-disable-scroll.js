@@ -23,7 +23,7 @@ const clearTouchCount = () => {
 let deferedTouchPos = null;
 const setDeferedTouchPos = createThrottlingFunction((newTouchPos) => {
   deferedTouchPos = newTouchPos;
-}, 300);
+}, 200);
 
 let prevTouchPos = null;
 
@@ -284,8 +284,8 @@ export function subscribeDisableScroll({
     const deferedDiffPos = endTouchPos - deferedTouchPos;
 
     const coeff = Math.abs(deferedDiffPos / 100);
-    const scrollValue = deferedDiffPos * coeff;
-    const needScroll = coeff >= 0.2;
+    const scrollValue = getNumberSign(deferedDiffPos) * 750 * coeff;
+    const needScroll = coeff >= 1;
     console.log(
       "End touch",
       "deferedDiffPos",
