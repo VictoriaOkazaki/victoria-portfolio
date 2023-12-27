@@ -1,4 +1,5 @@
 import { LiteEvent } from "@/hooks/shared/lite-event";
+import { createThrottlingFunction } from "./throttling";
 
 const CAN_LOCK_SCROLL = false;
 
@@ -10,10 +11,29 @@ var keys = { 37: 1, [KEY_UP_CODE]: 1, 39: 1, [KEY_DOWN_CODE]: 1 };
 
 const scrollEndedEvent = new LiteEvent();
 
+let touchCountTm = null;
+let touchCount = 0;
+const clearTouchCount = () => {
+  clearTimeout(touchCountTm);
+  touchCountTm = setTimeout(() => {
+    touchCount = 0;
+  }, 500);
+};
+
+let deferedTouchPos = null;
+const setDeferedTouchPos = createThrottlingFunction((newTouchPos) => {
+  deferedTouchPos = newTouchPos;
+}, 300);
+
 let prevTouchPos = null;
+
 const ontouchstart = (e) => {
-  // console.log('update touch pos', prevTouchPos)
   prevTouchPos = e.changedTouches[0].clientY;
+  console.log("Start touch", prevTouchPos);
+  deferedTouchPos = prevTouchPos;
+
+  touchCount++;
+  clearTouchCount();
 };
 
 function getNumberSign(value) {
@@ -26,10 +46,6 @@ const getNextScrollY = (scrollDeltaY) => {
   const { scrollTop: prevScroolTop } = document.scrollingElement;
   return prevScroolTop - scrollDeltaY;
 };
-
-// let touchDeltaYList = [];
-let touchDeltaYTime = Date.now();
-let touchBatchSum = 0;
 
 let lastDeltaYTime = Date.now();
 let speedDeltaYValue = 0;
@@ -66,35 +82,43 @@ function getScrollDeltaY(e) {
     // newTouchPos > touchPos then finger moving down
     scrollDeltaY = newTouchPos - prevTouchPos;
     prevTouchPos = newTouchPos;
+    setDeferedTouchPos(newTouchPos);
 
     isTouch = true;
   }
 
   const curSpeedSign = getNumberSign(scrollDeltaY);
   const nowTime = Date.now();
-  const isSpeedTime = nowTime - lastDeltaYTime < needSpeedTimeDiff;
+  const isSpeedTime = isTouch || nowTime - lastDeltaYTime < needSpeedTimeDiff;
 
+  const curTouchCount = touchCount > 0 ? touchCount - 1 : 0;
   if (isSpeedTime) {
-    const passedSec =
-      startSpeedTime !== null ? (nowTime - startSpeedTime) / 1000 : 0;
-
     if (isTouch) {
-      if (Math.abs(scrollDeltaY) > 45) {
-        speedDeltaYValue = Math.abs(scrollDeltaY * 2);
-      } else if (Math.abs(scrollDeltaY) > 25) {
-        speedDeltaYValue = Math.abs(scrollDeltaY * 1.5);
-      } else {
-        speedDeltaYValue = 0;
-      }
-      // console.log(
-      //   "speed for scroll scrollDeltaY",
-      //   scrollDeltaY,
-      //   "speedDeltaYValue",
-      //   speedDeltaYValue
-      // );
+      speedDeltaYValue = 0;
+
+      const touchCountExtraValue = curTouchCount * 20;
+
+      let endTouchExtraValue = 0;
+
+      speedDeltaYValue += touchCountExtraValue;
+      speedDeltaYValue += endTouchExtraValue;
+
+      console.log(
+        "\nCALC TOUCH SPEED:",
+        "\ncurTouchCount",
+        curTouchCount,
+        "\ntouchCountExtraValue",
+        touchCountExtraValue,
+        "\nendTouchExtraValue",
+        endTouchExtraValue,
+        "\nfinal speedDeltaYValue = ",
+        speedDeltaYValue
+      );
     }
 
     if (!isTouch) {
+      const passedSec =
+        startSpeedTime !== null ? (nowTime - startSpeedTime) / 1000 : 0;
       speedDeltaYValue += Math.pow(speedNumForPower, passedSec);
     }
 
@@ -115,7 +139,7 @@ function getScrollDeltaY(e) {
   // console.log("speedDeltaYValue", speedDeltaYValue);
   lastDeltaYTime = Date.now();
 
-  let scrollBehavior = "instant";
+  let scrollBehavior = isTouch && curTouchCount > 1 ? "smooth" : "instant";
 
   if (scrollDeltaY !== 0) {
     if (scrollDeltaY > 0) {
@@ -123,36 +147,6 @@ function getScrollDeltaY(e) {
     }
     if (scrollDeltaY < 0) {
       scrollDeltaY -= speedDeltaYValue;
-    }
-  }
-
-  if (isTouch) {
-    const diffTime = Date.now() - touchDeltaYTime;
-    touchDeltaYTime = Date.now();
-    touchBatchSum = diffTime < 100 ? touchBatchSum + scrollDeltaY : 0;
-    if (Math.abs(touchBatchSum) > 500) {
-      scrollDeltaY = scrollDeltaY + touchBatchSum;
-      scrollBehavior = "smooth";
-      console.log("Touch smooth scroll worked", scrollDeltaY);
-      touchBatchSum = 0;
-      // const curTime = Date.now();
-      // const prevTouchDeltaYTime = touchDeltaYTime;
-      // touchDeltaYList.push(scrollDeltaY);
-      // if (curTime - prevTouchDeltaYTime > 100) {
-      //   touchDeltaYTime = curTime;
-      //   scrollDeltaY = touchDeltaYList.reduce((acc, cur) => acc + cur, 0);
-      //   console.log(
-      //     "Calc touch scrollDeltaY",
-      //     scrollDeltaY,
-      //     "from",
-      //     touchDeltaYList.length,
-      //     "elements"
-      //   );
-      //   scrollBehavior = "smooth";
-      //   touchDeltaYList = [];
-      // } else {
-      //   scrollDeltaY = 0;
-      // }
     }
   }
 
@@ -185,7 +179,7 @@ const checkSmoothScrolling = (scrollDeltaY) => {
     //   console.warn("Smooth scroll direction changed. Set zero.");
     //   smoothScrollDeltaY = 0;
     // }
-    smoothScrollDeltaY += scrollDeltaY * 2;
+    smoothScrollDeltaY += scrollDeltaY;
     // console.log("Smooth scroll delta y changed", smoothScrollDeltaY);
     startScrollDetection();
     return true;
@@ -211,24 +205,26 @@ export function subscribeDisableScroll({
   let isPauseScroll = false;
   let lockTime = Date.now();
 
+  const checkScrollLocked = () => Date.now() - lockTime < 500;
+
   const doScrollWithLock = (scrollDeltaY, behavior) => {
     const isScrollTop = getIsScrollTop(scrollDeltaY);
     const isScrollBottom = getIsScrollBottom(scrollDeltaY);
     let nextScrollY = getNextScrollY(scrollDeltaY);
     const EPS = 20;
-    console.log("isScrollTop", isScrollTop, "isScrollBottom", isScrollBottom);
+    // console.log("isScrollTop", isScrollTop, "isScrollBottom", isScrollBottom);
     const needLockScrollTop =
       getNeedLockScrollTop() && isScrollTop && lockScrollY + EPS > nextScrollY;
     const needLockScrollBottom =
       getNeedLockScrollBottom() &&
       isScrollBottom &&
       nextScrollY > lockScrollY - EPS;
-    console.log(
-      "needLockScrollTop",
-      needLockScrollTop,
-      "needLockScrollBottom",
-      needLockScrollBottom
-    );
+    // console.log(
+    //   "needLockScrollTop",
+    //   needLockScrollTop,
+    //   "needLockScrollBottom",
+    //   needLockScrollBottom
+    // );
 
     const locked =
       CAN_LOCK_SCROLL && (needLockScrollTop || needLockScrollBottom);
@@ -281,13 +277,32 @@ export function subscribeDisableScroll({
     startScrollDetection();
   };
 
-  function preventDefault(e) {
-    e.preventDefault();
+  const ontouchend = (e) => {
+    if (checkScrollLocked()) return;
 
-    const nowTime = Date.now();
-    if (nowTime - lockTime < 500) return;
+    const endTouchPos = e.changedTouches[0].clientY;
+    const deferedDiffPos = endTouchPos - deferedTouchPos;
 
-    const { scrollDeltaY, scrollBehavior } = getScrollDeltaY(e);
+    const coeff = Math.abs(deferedDiffPos / 100);
+    const scrollValue = deferedDiffPos * coeff;
+    const needScroll = coeff >= 1;
+    console.log(
+      "End touch",
+      "deferedDiffPos",
+      deferedDiffPos,
+      "coeff",
+      coeff,
+      "scrollValue",
+      scrollValue,
+      "needScroll",
+      needScroll
+    );
+    if (needScroll) {
+      doScrollByDeltaY(scrollValue, "smooth");
+    }
+  };
+
+  function doScrollByDeltaY(scrollDeltaY, scrollBehavior) {
     if (checkSmoothScrolling(scrollDeltaY)) {
       return;
     }
@@ -312,6 +327,15 @@ export function subscribeDisableScroll({
     if (!locked && scrollBehavior === "smooth") {
       startSmoothScrolling();
     }
+  }
+
+  function preventDefault(e) {
+    e.preventDefault();
+
+    if (checkScrollLocked()) return;
+
+    const { scrollDeltaY, scrollBehavior } = getScrollDeltaY(e);
+    doScrollByDeltaY(scrollDeltaY, scrollBehavior);
   }
 
   function preventDefaultForScrollKeys(e) {
@@ -343,6 +367,7 @@ export function subscribeDisableScroll({
   window.addEventListener(wheelEvent, preventDefault, wheelOpt); // modern desktop
   window.addEventListener("touchmove", preventDefault, wheelOpt); // mobile
   window.addEventListener("touchstart", ontouchstart, wheelOpt);
+  window.addEventListener("touchend", ontouchend, wheelOpt);
   window.addEventListener("keydown", preventDefaultForScrollKeys, false);
   window.addEventListener("scroll", onScroll);
   scrollEndedEvent.on(onSmoothScrollEnded);
@@ -352,6 +377,7 @@ export function subscribeDisableScroll({
     window.removeEventListener(wheelEvent, preventDefault, wheelOpt);
     window.removeEventListener("touchmove", preventDefault, wheelOpt);
     window.removeEventListener("touchstart", ontouchstart, wheelOpt);
+    window.removeEventListener("touchend", ontouchend, wheelOpt);
     window.removeEventListener("keydown", preventDefaultForScrollKeys, false);
     window.removeEventListener("scroll", onScroll);
     scrollEndedEvent.off(onSmoothScrollEnded);

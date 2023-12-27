@@ -1,17 +1,17 @@
-export function createThrottlingFunction<ResT>(
-  operation: () => ResT,
+export function createThrottlingFunction<ArgT, ResT>(
+  operation: (arg: ArgT) => ResT,
   throttlingInterval: number
-): () => ResT {
+): (arg: ArgT) => ResT {
   let lastTime = 0;
   let lastResult: ResT;
-  const func = () => {
+  const func = (arg: ArgT) => {
     const curTime = Date.now();
     if (curTime - lastTime < throttlingInterval) {
       return lastResult;
     }
 
     lastTime = curTime;
-    lastResult = operation();
+    lastResult = operation(arg);
     return lastResult;
   };
   return func;
