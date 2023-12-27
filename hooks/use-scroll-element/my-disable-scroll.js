@@ -270,10 +270,6 @@ export function subscribeDisableScroll({
     }
     console.log("Do next smooth scroll", curSmoothScrollDeltaY);
     doScrollWithLock(curSmoothScrollDeltaY, "smooth");
-    // window.scrollTo({
-    //   behavior: "smooth",
-    //   top: nextScrollY,
-    // });
     startScrollDetection();
   };
 
@@ -285,7 +281,7 @@ export function subscribeDisableScroll({
 
     const coeff = Math.abs(deferedDiffPos / 100);
     const scrollValue = getNumberSign(deferedDiffPos) * 750 * coeff;
-    const needScroll = coeff >= 1;
+    const needScroll = false && coeff >= 1;
     console.log(
       "End touch",
       "deferedDiffPos",
