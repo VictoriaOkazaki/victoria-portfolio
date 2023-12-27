@@ -1,7 +1,7 @@
 import { LiteEvent } from "@/hooks/shared/lite-event";
 import { createThrottlingFunction } from "./throttling";
 
-const CAN_LOCK_SCROLL = false;
+const CAN_LOCK_SCROLL = true;
 
 // left: 37, up: 38, right: 39, down: 40,
 // spacebar: 32, pageup: 33, pagedown: 34, end: 35, home: 36
