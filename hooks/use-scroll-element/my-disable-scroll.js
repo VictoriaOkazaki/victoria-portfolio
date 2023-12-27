@@ -281,7 +281,7 @@ export function subscribeDisableScroll({
 
     const coeff = Math.abs(deferedDiffPos / 100);
     const scrollValue = getNumberSign(deferedDiffPos) * 750 * coeff;
-    const needScroll = false && coeff >= 1;
+    const needScroll = coeff >= 1;
     console.log(
       "End touch",
       "deferedDiffPos",
