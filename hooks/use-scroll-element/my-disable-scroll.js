@@ -280,7 +280,7 @@ export function subscribeDisableScroll({
     const deferedDiffPos = endTouchPos - deferedTouchPos;
 
     const coeff = Math.abs(deferedDiffPos / 100);
-    const scrollValue = getNumberSign(deferedDiffPos) * 750 * coeff;
+    const scrollDeltaY = deferedDiffPos * 10;
     const needScroll = coeff >= 1;
     console.log(
       "End touch",
@@ -288,13 +288,13 @@ export function subscribeDisableScroll({
       deferedDiffPos,
       "coeff",
       coeff,
-      "scrollValue",
-      scrollValue,
+      "scrollDeltaY",
+      scrollDeltaY,
       "needScroll",
       needScroll
     );
     if (needScroll) {
-      doScrollByDeltaY(scrollValue, "smooth");
+      doScrollByDeltaY(scrollDeltaY, "smooth");
     }
   };
 
