@@ -1,5 +1,14 @@
 export default [
   {
+    "description": "I collected information about services and reviews from the old website and Instagram account. I created a selling structure, worked with photographs, wrote texts and designed the website using Tilda’s standard blocks.",
+    "id": "Ihgg5555f2fdfg55k",
+    "is_my_design": true,
+    "link": "https://tanyamin.tilda.ws/business-goals",
+    "name": "Business consultant",
+    "photo": "site-covers/business-goals.webp",
+    "ru_description": "Собрала информацию об услугах, отзывы со старого сайта и аккаунта Инстаграм. Составила продающую структуру, поработала с фотографиями, написала тексты и сверстала сайт с помощью стандартных блоков Тильды."
+  },
+  {
     "description": "I have improved the Customify WordPress theme and added information blocks using Elementor. Conducted SEO optimization, added pages of all products and categories to Google and Yandex results.",
     "id": "12fdfgfg40g55k",
     "is_my_design": false,
