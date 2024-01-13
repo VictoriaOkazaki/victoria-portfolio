@@ -9,6 +9,15 @@ export default [
     "ru_description": "Собрала информацию об услугах, отзывы со старого сайта и аккаунта Инстаграм. Составила продающую структуру, поработала с фотографиями, написала тексты и сверстала сайт с помощью стандартных блоков Тильды."
   },
   {
+    "description": "I designed a quiz site using the Flexbe constructor using both free and template sections. I used the old website as a reference and edited the texts provided by the customer.",
+    "id": "Ihfg584ffd55k",
+    "is_my_design": true,
+    "link": "https://kuhni-moskva1.ru/",
+    "name": "Мебельный Boss",
+    "photo": "site-covers/kitchen-boss.webp",
+    "ru_description": "Собрала сайт-квиз на конструкторе Flexbe с использованием как свободных секций, так и шаблонных. В качестве референса использовала старый сайт, занималась редактированием предоставленных заказчиком текстов."
+  },
+  {
     "description": "I have improved the Customify WordPress theme and added information blocks using Elementor. Conducted SEO optimization, added pages of all products and categories to Google and Yandex results.",
     "id": "12fdfgfg40g55k",
     "is_my_design": false,
