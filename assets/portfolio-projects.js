@@ -39,7 +39,7 @@ export default [
     "description": "Developed a prototype, design and markup of a website for a cafe using Vue and Nuxt3. Wrote some of the texts. Added the site to the search results of Google and Yandex browsers. I created an admin panel for the client so that he could add new posts and products.",
     "id": "12fdfdgffgfg55k",
     "is_my_design": true,
-    "link": "https://cafe-de-rama.vercel.app/",
+    "link": "https://www.deramacafe.az/",
     "name": "De Rama Cafe",
     "photo": "site-covers/de-rama-cafe.webp",
     "ru_description": "Разработала прототип, дизайн и сверстала сайт для веган кафе с использованием Vue и Nuxt3. Написала часть текстов. Добавила сайт в выдачу браузеров Google и Яндекс. Создала админ-панель для клиента, чтобы он мог добавлять новые посты и товары."
