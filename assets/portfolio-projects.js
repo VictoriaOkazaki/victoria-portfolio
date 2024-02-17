@@ -1,5 +1,14 @@
 export default [
   {
+    "description": "I developed a prototype, drew a design in a modern style and a black theme, then created a website for a marketing agency using zero blocks in Tilda. Educational project.",
+    "id": "Iff554gkturegk",
+    "is_my_design": true,
+    "link": "https://vic1.tilda.ws/platinum-pulse",
+    "name": "Platinum Pulse",
+    "photo": "site-covers/platinum-pulse.webp",
+    "ru_description": "Разработала прототип, отрисовала дизайн в современном стиле и черной теме, затем сверстала сайт для маркетинг-агенства с использованием zero-блоков в Тильде. Учебный проект."
+  },
+  {
     "description": "I collected information about services and reviews from the old website and Instagram account. I created a selling structure, worked with photographs, wrote texts and designed the website using Tilda’s standard blocks.",
     "id": "Ihgg5555f2fdfg55k",
     "is_my_design": true,
@@ -126,15 +135,6 @@ export default [
     "ru_description": "Сверстала лендинг жилищного комплекса по готовому макету. На сайте реализовала возможность осмотреть все здание по этажам и схемы квартир на каждом этаже с помощью Javascript. Учебный проект."
   },
   {
-    "description": "I markuped a website for selling Christmas trees using a ready-made layout. I wrote a timer for the end of a sale using Javascript. Educational project.",
-    "id": "30052979b",
-    "is_my_design": false,
-    "link": "https://victoriaokazaki.github.io/chrismas-trees/",
-    "name": "Chrismas Trees",
-    "photo": "site-covers/chrismas-trees.webp",
-    "ru_description": "Сверстала сайт для продажи елок по готовому макету. Написала таймер окончания распродажи с использованием Javascript. Учебный проект."
-  },
-  {
     "description": "I markuped a multi-page website for a furniture design studio using a ready-made layout. The site has a gallery, sliders, blog and Google map. Educational project.",
     "id": "50047745b",
     "is_my_design": false,
@@ -151,41 +151,5 @@ export default [
     "name": "My Beacons site",
     "photo": "site-covers/beacons.webp",
     "ru_description": "Собрала свой сайт на Beacons, описывающий мои услуги."
-  },
-  {
-    "description": "I markuped the landing page for IPhone13 Pro. On the site, I implemented drop-down menus of product characteristics and loading of additional gadgets. Educational project.",
-    "id": "50051752b",
-    "is_my_design": false,
-    "link": "https://victoriaokazaki.github.io/iphone13pro/",
-    "name": "IPhone 13 Pro",
-    "photo": "site-covers/iphone13pro.webp",
-    "ru_description": "Сверстала лендинг IPhone13 Pro. На сайте реализовала выпадающие меню характеристик товара и подгрузку дополнительных гаджетов. Учебный проект."
-  },
-  {
-    "description": "I wrote a web application for a travel company that allows clients to select a tour and book seats on a plane using Javascript. Educational project.",
-    "id": "50131681a",
-    "is_my_design": false,
-    "link": "https://victoriaokazaki.github.io/plane-seats/",
-    "name": "Plane seats",
-    "photo": "site-covers/plane-seats.webp",
-    "ru_description": "Написала веб-приложение туристической фирмы, позволяющее клиентам выбрать тур и забронировать места в самолете с использованием Javascript."
-  },
-  {
-    "description": "I built a portfolio of a video game screenwriter using the Tilda constructor's Zero blocks. The site includes several sections and interesting animations. Educational project.",
-    "id": "50132022b",
-    "is_my_design": false,
-    "link": "http://victoriasportfolio.tilda.ws/",
-    "name": "Creative Portfolio",
-    "photo": "site-covers/creative-portfolio.webp",
-    "ru_description": "Собрала портфолио сценариста видеоигр на конструкторе Tilda с использованием зеро-блоков. Сайт включает в себя несколько секций и интересные анимации."
-  },
-  {
-    "description": "I markuped home page of multipage site related to apartment rent company using ready layout. Educational project.",
-    "id": "50131681b",
-    "is_my_design": false,
-    "link": "https://victoriaokazaki.github.io/to2rent/",
-    "name": "to2rent",
-    "photo": "site-covers/to2rent.webp",
-    "ru_description": "Сверстала главную страницу многостраничного сайта компании по аренде апартаментов по готовому макету. Учебный проект."
   },
 ]
