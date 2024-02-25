@@ -341,5 +341,11 @@ const { t } = useI18n({
             height: 12px;
         }
     }
+
+    .review {
+        &__item {
+            padding: 15px 15px 25px 15px;
+        }
+    }
 }
 </style>
