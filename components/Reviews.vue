@@ -326,6 +326,8 @@ const { t } = useI18n({
     .popup {
         &__inner {
             width: 90%;
+            max-height: 80%;
+            height: fit-content;
         }
 
         &__close {
