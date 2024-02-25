@@ -142,7 +142,7 @@ const { t } = useI18n({
     z-index: 50;
 
     &__inner {
-        width: 80%;
+        width: fit-content;
         height: 80%;
         display: flex;
         justify-content: center;
