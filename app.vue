@@ -30,6 +30,9 @@
           <Skills />
         </div>
       </section>
+      <section class="reviews" id="reviews">
+        <Reviews />
+      </section>
       <section class="contacts" id="contacts" :style="contactStyle">
         <div class="container">
           <Contacts />
@@ -46,10 +49,6 @@
 </template>
 
 <style lang="scss" scoped>
-.container {
-  padding: 0 100px;
-}
-
 .container-hero {
   background-repeat: no-repeat;
   background-size: cover;
@@ -82,6 +81,7 @@
 }
 
 .works,
+.reviews,
 .footer {
   background-color: var(--main-color);
   position: relative;
@@ -137,9 +137,6 @@
 }
 
 @media (max-width: 1400px) {
-  .container {
-    padding: 0 80px;
-  }
 
   .container-65 {
     width: 75%;
@@ -159,25 +156,14 @@
 }
 
 @media (max-width: 800px) {
-  .container {
-    padding: 0 60px;
-  }
 
   .container-hero {
     background-position: top;
   }
 }
 
-@media (max-width: 500px) {
-  .container {
-    padding: 0 40px;
-  }
-}
 
 @media (max-width: 500px) {
-  .container {
-    padding: 0 30px;
-  }
 
   .burger__window-list {
     left: 30px;
@@ -185,12 +171,6 @@
 
   .burger__window-item {
     margin: 0 1px;
-  }
-}
-
-@media (max-width: 320px) {
-  .container {
-    padding: 0 20px;
   }
 }
 </style>

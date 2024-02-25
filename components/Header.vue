@@ -5,10 +5,9 @@
                 <img :src="logoPath" alt="logo" class="logo">
             </NuxtLink>
             <nav class="header__menu">
-                <ul class="header__menu-list" :class="{'menu-active': isBurgerOpen}">
+                <ul class="header__menu-list" :class="{ 'menu-active': isBurgerOpen }">
                     <li class="header__menu-item font2" v-for="link in links">
-                        <a :href="link.href" @click.prevent="clickMenuLink(link)"
-                            class="header__menu-link">{{ link.title }}
+                        <a :href="link.href" @click.prevent="clickMenuLink(link)" class="header__menu-link">{{ link.title }}
                         </a>
                     </li>
                 </ul>
@@ -25,6 +24,7 @@
         "about": "About",
         "works": "Works",
         "skills": "Skills",
+        "reviews": "Reviews",
         "contacts": "Contacts"
     },
     "ru": {
@@ -32,6 +32,7 @@
         "about": "Обо мне",
         "works": "Работы",
         "skills": "Навыки",
+        "reviews": "Отзывы",
         "contacts": "Контакты"
     }
 }
@@ -61,6 +62,10 @@ const links = computed(() => [{
 {
     href: '#skills',
     title: t('skills')
+},
+{
+    href: '#reviews',
+    title: t('reviews')
 },
 {
     href: '#contacts',
@@ -97,6 +102,7 @@ const logoPath = computed(() => {
 .header {
     padding-top: 50px;
     z-index: 50;
+
     &__inner {
         display: flex;
         align-items: center;
@@ -157,6 +163,7 @@ const logoPath = computed(() => {
             // margin: 0 15px;
             font-size: 18px;
             line-height: 23px;
+
             &:hover::after {
                 content: url(../assets/images/header-hover-effect-small.svg);
                 top: -10px;
@@ -165,11 +172,13 @@ const logoPath = computed(() => {
         }
     }
 }
+
 @media (max-width: 800px) {
     .header {
         &__menu {
             margin-left: 20px;
         }
+
         &__menu-item {
             margin: 0 8px;
             font-size: 14px;
@@ -177,40 +186,48 @@ const logoPath = computed(() => {
         }
     }
 }
+
 @media (max-width: 500px) {
     .header {
         padding-top: 40px;
         position: relative;
+
         &::before {
             content: url(../assets/images/burger-bg.svg);
             position: absolute;
             bottom: 13%;
             right: -20px;
         }
+
         &__inner {
             justify-content: space-between;
-            
+
         }
+
         &__menu-list {
             display: none;
             position: absolute;
             left: 0;
             top: 150%;
         }
+
         &__menu-item {
             margin: 8px 0;
             font-size: 16px;
             line-height: 21px;
             color: var(--text-color-2);
+
             &:hover,
             &:active {
                 color: #FF2400;
             }
+
             &:hover::after {
                 content: '';
             }
         }
     }
+
     .menu-active {
         display: flex;
         flex-direction: column;

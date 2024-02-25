@@ -57,6 +57,16 @@
 	}
 }
 
+.container {
+	padding: 0 100px;
+}
+
+@media (max-width: 1400px) {
+	.container {
+		padding: 0 80px;
+	}
+}
+
 @media (max-width: 1200px) {
 	.title {
 		font-size: 36px;
@@ -66,6 +76,12 @@
 	.text {
 		font-size: 20px;
 		line-height: 26px;
+	}
+}
+
+@media (max-width: 800px) {
+	.container {
+		padding: 0 60px;
 	}
 }
 
@@ -79,13 +95,25 @@
 		font-size: 16px;
 		line-height: 20px;
 	}
+
 	.mark {
-        width: 72px;
-        height: 72px;
-    }
-    .mark-text {
-        font-size: 12px;
-    }
+		width: 72px;
+		height: 72px;
+	}
+
+	.mark-text {
+		font-size: 12px;
+	}
+
+	.container {
+		padding: 0 30px;
+	}
+}
+
+@media (max-width: 320px) {
+	.container {
+		padding: 0 20px;
+	}
 }
 
 .font1 {

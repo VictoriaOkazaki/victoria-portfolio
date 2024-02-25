@@ -89,7 +89,7 @@
 
 
 @keyframes text-glow {
-    0% {
+	0% {
 		text-shadow: 0 0 2px #fff, 0 0 3px var(--text-glow-1);
 	}
 
@@ -101,20 +101,24 @@
 		text-shadow: 0 0 5px #fff, 0 0 5px var(--text-glow-3);
 	}
 }
+
 .hero__title,
 .about__bottom-title,
 .about__top-title,
 .works__title,
 .skills__title,
+.review__title,
 .contacts__title {
 	animation: cursor 0.2s step-end infinite, printed_text 4s steps(29) infinite;
 }
+
 .about__top-container,
 .about__jobs {
 	animation: border-glow-1 3s infinite;
 }
 
-.works__item {
+.works__item,
+.review__item {
 	animation: border-glow-2 3s infinite;
 }
 
@@ -126,11 +130,13 @@
 .hero__btn-cont {
 	animation: pulse 4s linear infinite;
 }
+
 .skills__row-item,
 .works__item-link {
-    animation: pulse-2 4s ease-in infinite;
+	animation: pulse-2 4s ease-in infinite;
 }
+
 .footer__top-text,
 .hero__name {
-animation: text-glow 4s infinite;
+	animation: text-glow 4s infinite;
 }
