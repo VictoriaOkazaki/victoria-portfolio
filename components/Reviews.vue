@@ -294,6 +294,10 @@ const { t } = useI18n({
             font-size: 14px;
             line-height: 20px;
         }
+
+        &__look {
+            font-size: 14px;
+        }
     }
 }
 

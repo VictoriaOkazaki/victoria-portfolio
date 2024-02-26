@@ -26,4 +26,13 @@ export default [
         "photo": "reviews/rev-3.webp",
         "contact": "https://t.me/sv_pakhtusova"
     },
+    {
+        "text": "Victoria herself wrote to me offering her services in developing a website for my cafe. At that time I was just thinking that I needed a website, so her service would come in handy. I agreed because I was satisfied with the prices and terms. I wanted the site to reflect the values ​​of vegetarianism, with an easy-to-use menu and a booking button. Victoria made a beautiful, user-friendly website that loads quickly, as well as an admin panel for publishing blog articles. I liked the design, nice colors, associating with nature.<br><br>At the beginning of our work, I didn’t even know that it would be possible to find my website by searching for 'vegetarian cafe Baku' and similar queries in Google and Yandex. Victoria explained that she could implement this too. As a result, the number of visitors increased. I was pleased with the work done.",
+        "ru_text": "Виктория сама написала мне с предложением своих услуг в разработке сайта для моего кафе. Я в это время как раз думал, что мне необходим сайт, так что её услуга мне будет кстати. Я согласился, так как меня устраивали цены и сроки. Я хотел, чтобы сайт отражал ценности вегетарианства, на нем было удобное меню и кнопка для бронирования. Виктория сделала красивый, удобный сайт, который быстро загружается, а также админ-панель для публикации статей в блоге. Мне понравилось оформление, приятные цвета, ассоциируется с природой.<br><br>В начале нашей работы я не знал даже, что можно будет найти мой сайт по запросу 'вегетарианское кафе баку' и похожие запросы в гугл и яндекс. Виктория объяснила, что может реализовать и это. В результате увеличилось число посетителей. Я остался доволен проделанной работой.",
+        "link": "https://www.deramacafe.az",
+        "ru_name": "Рауф, предприниматель (Азербайджан)",
+        "name": "Rauf, businessman (Azerbaijan)",
+        "photo": "reviews/rev-4.webp",
+        "contact": "https://wa.me/994555108108"
+    },
 ]
