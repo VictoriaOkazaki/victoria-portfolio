@@ -68,7 +68,8 @@ const checkCanNextAndPrev = () => {
     const element = scroller.value
     const maxScrollLeft = element.scrollWidth - element.clientWidth
     canPrev.value = element.scrollLeft !== 0
-    canNext.value = element.scrollLeft < maxScrollLeft
+    const DELTA = 10
+    canNext.value = element.scrollLeft < (maxScrollLeft - DELTA)
     // console.log('Check cam next and prev', element.scrollLeft, '/', maxScrollLeft,
     //     'canPrev', canPrev.value, 'canNext', canNext.value)
 }
@@ -115,6 +116,7 @@ const { t } = useI18n({
     top: 50%;
     z-index: 40;
     border: none;
+    cursor: pointer;
 }
 
 #arrow-1 {
