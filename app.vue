@@ -199,7 +199,7 @@ useHead({
     },
   ],
   meta: [
-        { property: "og:site_name", content: "Сайт-портфолио" },
+        { property: "og:site_name", content: "Сайт-портфолио Виктории Казаковой" },
         {
             property: "og:title",
             content: "Портфолио сайтолога: кейсы, отзывы, стек технологий, навыки",
