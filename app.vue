@@ -197,7 +197,18 @@ useHead({
       href: 'https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500&family=Exo+2:wght@300;400&family=Jura&family=Sofia+Sans&family=Space+Grotesk:wght@300;400&family=Syne+Mono&display=swap',
       rel: 'stylesheet'
     },
-  ]
+  ],
+  meta: [
+        { property: "og:site_name", content: "Сайт-портфолио" },
+        {
+            property: "og:title",
+            content: "Портфолио сайтолога: кейсы, отзывы, стек технологий, навыки",
+        },
+        { property: "og:url", content: "https://victoria-kazakova-portfolio.vercel.app" },
+        {property: "og:image", content: "https://victoria-kazakova-portfolio.vercel.app/assets/images/logo.svg"},
+        {property: "og:description", content: "Я веб-дизайнер и разработчик сайтов. Создаю сайты под ключ. Делаю все этапы работ: разработка структуры, написание текстов, дизайн и верстка, подключение сервисов и оплаты, первичная SEO-оптимизация. Работаю как с конструкторами (Тильда, Флексби, Тинькофф), так и верстаю кодом."},
+        {property: "og:type", content: "website"}
+    ],
 })
 
 const { locale } = useI18n()
