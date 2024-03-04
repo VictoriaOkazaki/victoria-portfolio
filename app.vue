@@ -206,7 +206,7 @@ useHead({
             property: "og:title",
             content: "Портфолио сайтолога: кейсы, отзывы, стек технологий, навыки",
         },
-        {property: "og:image", content: "/assets/images/logo.svg"},
+        {property: "og:image", content: "https://ogcdn.net/6064b869-74ed-4eb9-b76c-0b701ffe7e6b/v4/victoria-kazakova-portfolio.vercel.app/%D0%9F%D0%BE%D1%80%D1%82%D1%84%D0%BE%D0%BB%D0%B8%D0%BE%20%D1%81%D0%B0%D0%B9%D1%82%D0%BE%D0%BB%D0%BE%D0%B3%D0%B0%3A%20%D0%BA%D0%B5%D0%B9%D1%81%D1%8B%2C%20%D0%BE%D1%82%D0%B7%D1%8B%D0%B2%D1%8B%2C%20%D1%81%D1%82%D0%B5%D0%BA%20%D1%82%D0%B5%D1%85%D0%BD%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D0%B9%2C%20%D0%BD%D0%B0%D0%B2%D1%8B%D0%BA%D0%B8/https%3A%2F%2Fopengraph.b-cdn.net%2Fproduction%2Fdocuments%2F9aa93554-1a52-412a-a4f3-aa9175b45344.jpg%3Ftoken%3DqmMBOYh23Jj4D_Yv_CJRjBg_AJ_Tax2LNwmFbBvGxdc%26height%3D640%26width%3D1024%26expires%3D33245559950/og.png"},
         {property: "og:description", content: "Создаю сайты под ключ. Делаю все этапы работ: разработка структуры, написание текстов, дизайн и верстка, подключение сервисов и оплаты, первичная SEO-оптимизация. Работаю как с конструкторами (Тильда, Флексби, Тинькофф), так и верстаю кодом."},
     ],
 })
