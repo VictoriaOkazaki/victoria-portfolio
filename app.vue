@@ -200,7 +200,7 @@ useHead({
   ],
   meta: [
   {property: "og:type", content: "website"},
-  { property: "og:url", content: "https://victoria-kazakova-portfolio.vercel.app" },
+  { property: "og:url", content: "soc-3.jpg" },
         { property: "og:site_name", content: "Сайт-портфолио Виктории Казаковой" },
         {
             property: "og:title",
