@@ -1,12 +1,21 @@
 export default [
   {
-    "description": "I developed a prototype, drew a design in a modern style and a black theme, then created a website for a marketing agency using zero blocks in Tilda. Educational project.",
+    "description": "Developed the website structure for dress rentals. Implemented booking functionality and integrated services such as reviews and an Instagram feed. Executed unique design solutions for the Dawn theme on Shopify using code. Adapted and generated content, wrote some texts, and translated the site. Filled the catalog and thoroughly worked on the FAQ section.",
+    "id": "If75768655dffguregk",
+    "is_my_design": true,
+    "link": "https://mybenefice.com/",
+    "name": "MYBENEFICE",
+    "photo": "site-covers/mybenefice.webp",
+    "ru_description": "Разработала структуру сайта для аренды платьев. Реализовала бронирование и интегрировала сервисы, такие как отзывы и ленту Instagram. Выполнила нестандартные дизайн-решения для темы Dawn от Shopify с помощью кода. Адаптировала и сгенерировала контент, написала часть текстов и перевела. Заполнила каталог и детально проработала раздел FAQ."
+  },
+  {
+    "description": "I developed a prototype, drew a design in a modern style and a black theme, then created a website for a marketing agency using zero blocks in Tilda. Generated photos using neural networks. Educational project.",
     "id": "Iff554gkturegk",
     "is_my_design": true,
     "link": "https://vic1.tilda.ws/platinum-pulse",
     "name": "Platinum Pulse",
     "photo": "site-covers/platinum-pulse.webp",
-    "ru_description": "Разработала прототип, отрисовала дизайн в современном стиле и черной теме, затем сверстала сайт для маркетинг-агенства с использованием zero-блоков в Тильде. Учебный проект."
+    "ru_description": "Разработала прототип, отрисовала дизайн в современном стиле и черной теме, затем сверстала сайт для маркетинг-агенства с использованием zero-блоков в Тильде. Сгененрировала фото с помощью нейросетей. Учебный проект."
   },
   {
     "description": "I collected information about services and reviews from the old website and Instagram account. I created a selling structure, worked with photographs, wrote texts and designed the website using Tilda’s standard blocks.",
