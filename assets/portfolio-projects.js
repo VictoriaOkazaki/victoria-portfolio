@@ -107,15 +107,15 @@ export default [
     "photo": "site-covers/metajungles.webp",
     "ru_description": "Сверстала сайт для NFT проекта по предоставленному клиентом макету, самостоятельно реализовала непрерывно движущийся слайдер из картинок с использованием Javascript. Посадила верстку на Вордпресс. Проект закрыт, поэтому он на Гитхабе."
   },
-  {
-    "description": "I built a portfolio website for a copywriter using the free version of Tilda. Links to article categories lead to Google Docs. Images of work categories are created by neural networks.",
-    "id": "12gfg8546g55k",
-    "is_my_design": true,
-    "link": "https://anastasiya-copyrighter.tilda.ws/",
-    "name": "Copyrighter portfolio",
-    "photo": "site-covers/nastya.webp",
-    "ru_description": "Собрала сайт-портфолио для копирайтера на бесплатной версии Тильды. Ссылки на категории статей ведут в Гугл Документы. Изображения категорий работ созданы нейронными сетями."
-  },
+  // {
+  //   "description": "I built a portfolio website for a copywriter using the free version of Tilda. Links to article categories lead to Google Docs. Images of work categories are created by neural networks.",
+  //   "id": "12gfg8546g55k",
+  //   "is_my_design": true,
+  //   "link": "https://anastasiya-copyrighter.tilda.ws/",
+  //   "name": "Copyrighter portfolio",
+  //   "photo": "site-covers/nastya.webp",
+  //   "ru_description": "Собрала сайт-портфолио для копирайтера на бесплатной версии Тильды. Ссылки на категории статей ведут в Гугл Документы. Изображения категорий работ созданы нейронными сетями."
+  // },
   {
     "description": "I built coffee shop landing on Webflow. The site has nice animation effects and contains blog and a little coffee store. Educational project.",
     "id": "50133735b",
@@ -152,13 +152,13 @@ export default [
     "photo": "site-covers/desire.webp",
     "ru_description": "Сверстала многостраничный сайт студии дизайнерской мебели по готовому макету. На сайте имеются галерея, слайдеры, блог и Google-карта. Учебный проект."
   },
-  {
-    "description": "I built my Beacons page describing my services.",
-    "id": "12fdfdg500g55k",
-    "is_my_design": true,
-    "link": "https://beacons.ai/okazakivictoria",
-    "name": "My Beacons site",
-    "photo": "site-covers/beacons.webp",
-    "ru_description": "Собрала свой сайт на Beacons, описывающий мои услуги."
-  },
+  // {
+  //   "description": "I built my Beacons page describing my services.",
+  //   "id": "12fdfdg500g55k",
+  //   "is_my_design": true,
+  //   "link": "https://beacons.ai/okazakivictoria",
+  //   "name": "My Beacons site",
+  //   "photo": "site-covers/beacons.webp",
+  //   "ru_description": "Собрала свой сайт на Beacons, описывающий мои услуги."
+  // },
 ]
