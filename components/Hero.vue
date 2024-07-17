@@ -40,6 +40,11 @@
                         </a>
                     </li>
                     <li class="hero__social-item">
+                        <a href="https://dribbble.com/victoriatimein" class="hero__social-link" target="_blank">
+                            <img :src="dribblePath" alt="dribble" class="hero__social-img">
+                        </a>
+                    </li>
+                    <li class="hero__social-item">
                         <a href="https://www.linkedin.com/in/%D0%B2%D0%B8%D0%BA%D1%82%D0%BE%D1%80%D0%B8%D1%8F-%D0%BA%D0%B0%D0%B7%D0%B0%D0%BA%D0%BE%D0%B2%D0%B0-156399199/"
                             class="hero__social-link" target="_blank">
                             <img :src="linkedPath" alt="linkedin" class="hero__social-img">
@@ -89,6 +94,8 @@ import linked from '../assets/images/social/linkedin.svg';
 import linkedLight from '../assets/images/social/linkedin-l.svg';
 import behance from '../assets/images/social/behance.svg';
 import behanceLight from '../assets/images/social/behance-l.svg';
+import dribble from '../assets/images/social/dribble.svg';
+import dribbleLight from '../assets/images/social/dribble-l.svg';
 
 import { useBurger } from '~~/hooks/useBurger';
 
@@ -149,6 +156,12 @@ const behancePath = computed(() => {
         return behanceLight
     }
     return behance
+})
+const dribblePath = computed(() => {
+    if (isLight.value) {
+        return dribbleLight
+    }
+    return dribble
 })
 </script>
 

@@ -23,9 +23,14 @@
                             <img :src="gitPath" alt="github" class="footer__social-img">
                         </a>
                     </li>
-                    <li class="hero__social-item">
+                    <li class="footer__social-item">
                         <a href="https://www.behance.net/kazakovviktori" class="hero__social-link" target="_blank">
                             <img :src="behancePath" alt="behance" class="hero__social-img">
+                        </a>
+                    </li>
+                    <li class="footer__social-item">
+                        <a href="https://dribbble.com/victoriatimein" class="hero__social-link" target="_blank">
+                            <img :src="dribblePath" alt="dribble" class="hero__social-img">
                         </a>
                     </li>
                     <li class="footer__social-item">
@@ -89,6 +94,8 @@ import insta from '../assets/images/social/instagram.svg';
 import instaLight from '../assets/images/social/instagram-l.svg';
 import behance from '../assets/images/social/behance.svg';
 import behanceLight from '../assets/images/social/behance-l.svg';
+import dribble from '../assets/images/social/dribble.svg';
+import dribbleLight from '../assets/images/social/dribble-l.svg';
 
 const { t } = useI18n({
     useScope: 'local'
@@ -152,6 +159,12 @@ const behancePath = computed(() => {
         return behanceLight
     }
     return behance
+})
+const dribblePath = computed(() => {
+    if (isLight.value) {
+        return dribbleLight
+    }
+    return dribble
 })
 </script>
 
