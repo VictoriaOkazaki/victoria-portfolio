@@ -32,7 +32,7 @@
 {
     "en": {
         "title": "About me",
-        "text": "My name is Victoria and i live in Baku city. I graduated from Moscow State Univercity at 2020. I started creating sites from Tilda and Webflow constructors. Then I got my hand in HTML, CSS, Javascript and SCSS preprocessor. I worked with the Gulp assembler, then decided to use something more modern and convenient. So I switched to using Vue and Nuxt3 in my work. In 2023, I decided to master web design and now I can create a prototype and website design myself. In 2025, I mastered React, which I now use in my work, as well as Tailwind CSS.",
+        "text": "My name is Victoria, and I live in Baku. I graduated from Moscow State University in 2020. I started learning web development with Tilda and Webflow. Then, I mastered HTML, CSS, JavaScript, and the SCSS preprocessor. I worked with Gulp as a task runner but later switched to a more modern and convenient approach. That’s how I transitioned to Vue3 and Nuxt. In 2023, I decided to learn web design, and now I can create both prototypes and full website designs myself. In 2025, I mastered React, Next.js, and TypeScript, which I now use in my work, along with Tailwind CSS.",
         "subtitle": "What I can offer you:",
         "job-1": "an interview with you (orally, in writing) to draw up technical specifications, competitor analysis",
         "job-2": "site prototype and layout preparation in Figma",
@@ -53,7 +53,7 @@
     },
     "ru": {
         "title": "Обо мне",
-        "text": "Меня зовут Виктория, и я живу в Баку. Окончила в 2020 году Московский Государственный Университет. Изучение веб-разработки начала с конструкторов Tilda и Webflow. Затем освоила HTML, CSS, Javascript и препроцессор SCSS. Работала со сборщиком Gulp, затем решила использовать что-то более современное и удобное. Так перешла к использованию в работе Vue и Nuxt3. В 2023 году я решила освоить веб-дизайн и теперь сама могу создать прототип и дизайн сайта. В 2025 году освоила React, который теперь использую в работе, а также Tailwind CSS.",
+        "text": "Меня зовут Виктория, и я живу в Баку. Окончила в 2020 году Московский Государственный Университет. Изучение веб-разработки начала с конструкторов Tilda и Webflow. Затем освоила HTML, CSS, Javascript и препроцессор SCSS. Работала со сборщиком Gulp, затем решила использовать что-то более современное и удобное. Так перешла к использованию в работе Vue3 и Nuxt. В 2023 году я решила освоить веб-дизайн и теперь сама могу создать прототип и дизайн сайта. В 2025 году освоила React, NextJS и TypeScript которые теперь использую в работе, а также Tailwind CSS.",
         "subtitle": "Что я могу вам предложить:",
         "job-1": "интервью с вами (устно, письменно) для составления технического задания, анализ конкурентов",
         "job-2": "разработку прототипа и макета сайта в Figma",
