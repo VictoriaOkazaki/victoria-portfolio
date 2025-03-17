@@ -46,8 +46,9 @@
         "job-10": "writing the main meta tags (title, description, h1) and adding the site to the results of Google and Yandex browsers;",
         "job-11": "site transfer to hosting, domain connection",
         "job-12": "primary SEO optimization",
-        "job-13": "connecting statistics collection — Yandex.Metrica and Google Analytics",
-        "job-14": "website development and problem solving."
+        "job-13": "semantic layout",
+        "job-14": "connecting statistics collection — Yandex.Metrica and Google Analytics",
+        "job-15": "website development and problem solving."
     },
     "ru": {
         "title": "Обо мне",
@@ -65,8 +66,9 @@
         "job-10": "прописывание основных мета-тегов (title, description, h1) и добавление сайта в выдачу Google и Яндекс браузеров",
         "job-11": "перенос сайта на хостинг, подключение домена",
         "job-12": "первичную SEO-оптимизацию",
-        "job-13": "подключение сбора статистики — Яндекс.Метрика и Google Analytics",
-        "job-14": "доработку сайта и решение различных проблем."
+        "job-13": "семантическую верстку",
+        "job-14": "подключение сбора статистики — Яндекс.Метрика и Google Analytics",
+        "job-15": "доработку сайта и решение различных проблем."
     }
 }
 </i18n>
@@ -123,11 +125,11 @@ const jobs = computed(() => [{
 },
 {
     path: job3Path.value,
-    ids: [10, 11, 12]
+    ids: [10, 11, 12, 13]
 },
 {
     path: job4Path.value,
-    ids: [13, 14]
+    ids: [14, 15]
 }])
 
 const activeIndex = ref(0)
