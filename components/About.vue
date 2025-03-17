@@ -48,7 +48,8 @@
         "job-12": "primary SEO optimization",
         "job-13": "semantic layout",
         "job-14": "connecting statistics collection — Yandex.Metrica and Google Analytics",
-        "job-15": "website development and problem solving."
+        "job-15": "payment integration on the website",
+        "job-16": "website development and problem solving."
     },
     "ru": {
         "title": "Обо мне",
@@ -68,7 +69,8 @@
         "job-12": "первичную SEO-оптимизацию",
         "job-13": "семантическую верстку",
         "job-14": "подключение сбора статистики — Яндекс.Метрика и Google Analytics",
-        "job-15": "доработку сайта и решение различных проблем."
+        "job-15": "подключение оплаты на сайт",
+        "job-16": "доработку сайта и решение различных проблем."
     }
 }
 </i18n>
@@ -129,7 +131,7 @@ const jobs = computed(() => [{
 },
 {
     path: job4Path.value,
-    ids: [14, 15]
+    ids: [14, 15, 16]
 }])
 
 const activeIndex = ref(0)
