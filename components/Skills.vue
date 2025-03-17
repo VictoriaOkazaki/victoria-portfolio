@@ -4,7 +4,7 @@
         <div class="skills__content">
             <ul class="skills__row">
                 <li class="skills__row-item font2">
-                    <p class="skills__row-item-text">{js}</p>
+                    <p class="skills__row-item-text">{typescript}</p>
                 </li>
                 <li class="skills__row-item font2">
                     <p class="skills__row-item-text">{react, nextjs}</p>
